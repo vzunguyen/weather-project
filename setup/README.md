@@ -15,7 +15,7 @@ sh ~/Desktop/Miniforge3-MacOSX-arm64.sh
 
 where Desktop/ is the folder where the Miniforge installer was downloaded to. On your computer, you may have to replace it with Downloads/.
 
-![alt text](image.png)
+![alt text](./figures/image.png)
 
 Next, step through the download instructions, confirming with "Enter".
 
