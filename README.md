@@ -1,3 +1,5 @@
-## Data Science Project Template
+## Weather Prediction Model Project
 
-You can use this template to structure your Python data science projects. It is based on [Cookie Cutter Data Science](https://drivendata.github.io/cookiecutter-data-science/).
+This project is using template based on [Cookie Cutter Data Science](https://drivendata.github.io/cookiecutter-data-science/).
+
+The origin of this template is from this [repo](https://github.com/daveebbelaar/data-science-template).
