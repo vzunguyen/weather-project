@@ -46,3 +46,14 @@ conda deactivate
 ```
 pip install -r requirements.txt
 ```
+
+## 5. Install seaborn dependencies
+```
+conda install seaborn
+```
+
+## 6. Install Scikit-learn and active environment
+```
+conda create -n sklearn-env -c conda-forge scikit-learn
+conda activate sklearn-env
+```
