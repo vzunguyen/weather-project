@@ -11,8 +11,8 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 
 # Step 1. Load the datasets
 df1 = pd.read_csv('nyc_weather.csv')
-df2 = pd.read_csv('energy_usage.csv')
-df3 = pd.read_csv('cleaned_energy_effeciency.csv')
+df2 = pd.read_csv('energy_usage1.csv')
+df3 = pd.read_csv('cleaned_energy_effeciency1.csv')
 
 # Step 2. Inspect the datasets
 print("Dataset 1 Info:")
