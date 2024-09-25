@@ -157,6 +157,8 @@ print(confusion_matrix(y_test, y_pred))
 labels = ['Rainy', 'Snow', 'Partially Cloudy', 'Clear', 'Overcast']
 disp = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix(y_test, y_pred), display_labels=labels)
 disp.plot(cmap='Blues')
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
 plt.title('Confusion Matrix')
 plt.show()
 
@@ -180,6 +182,8 @@ print(confusion_matrix(y_test, y_pred_knn))
 labels = ['Rainy', 'Snow', 'Partially Cloudy', 'Clear', 'Overcast']
 disp = ConfusionMatrixDisplay(confusion_matrix(y_test, y_pred_knn), display_labels=labels)
 disp.plot(cmap='Greens')
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
 plt.title('Confusion Matrix')
 plt.show()
 
