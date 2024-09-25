@@ -13,7 +13,6 @@ import os
 # Change directory to the location of the merged dataset
 os.chdir('/Users/vzu/Projects/weather-project/data/raw')
 
-
 # Step 1. Load the datasets
 df1 = pd.read_csv('nyc_weather.csv')
 df2 = pd.read_csv('energy_usage.csv')
@@ -27,6 +26,9 @@ print(df2.info())
 print("\nDataset 3 Info:")
 print(df3.info())
 
+# Replace 'Partly' with 'Cloudy' in the 'weather_condition' column
+df1['conditions'] = df1['conditions'].replace(to_replace='Partly', value='Cloudy', regex=True)
+
 # Step 3. Clean the datasets
 # Handle missing values by filling with 'null'
 df1_cleaned = df1.fillna('null')
@@ -38,9 +40,64 @@ df1_cleaned = df1_cleaned.drop_duplicates()
 df2_cleaned = df2_cleaned.drop_duplicates()
 df3_cleaned = df3_cleaned.drop_duplicates()
 
+# Function to remove outliers using IQR
+def remove_outliers_iqr(df1, columns):
+    Q1 = df1[columns].quantile(0.25)
+    Q3 = df1[columns].quantile(0.75)
+    IQR = Q3 - Q1
+
+    # Define the bounds for non-outliers
+    lower_bound = Q1 - 1.5 * IQR
+    upper_bound = Q3 + 1.5 * IQR
+
+    # Filter the dataset to remove outliers
+    df1_cleaned = df1[~((df1[columns] < lower_bound) | (df1[columns] > upper_bound)).any(axis=1)]
+
+    return df1_cleaned
+
+# Applying the function to remove outliers
+columns_needed = ['temp', 'humidity', 'precip', 'windspeed']  # Specify the columns to check for outliers
+
 # Step 4. Merge the datasets on a common column 
-merged_df = pd.concat([df1_cleaned, df2_cleaned, df3_cleaned], axis=1)
-print(merged_df.head())
+merged_df = pd.concat([df1, df2, df3], axis=1)
+merged_df.fillna({'preciptype': 'null'}, inplace=True)
+
+def find_and_remove_outliers(data):
+    outliers_dict = {}
+    
+    # Iterate through numeric columns
+    for column in data.select_dtypes(include=['float64', 'int64']).columns:
+        Q1 = data[column].quantile(0.25)  # First quartile
+        Q3 = data[column].quantile(0.75)  # Third quartile
+        IQR = Q3 - Q1  # Interquartile range
+
+        # Define bounds for outliers
+        lower_bound = Q1 - 1.5 * IQR
+        upper_bound = Q3 + 1.5 * IQR
+
+        # Find outliers
+        outliers = data[(data[column] < lower_bound) | (data[column] > upper_bound)]
+        
+        # Store outliers in dictionary
+        outliers_dict[column] = outliers
+
+    # Remove outliers from the DataFrame
+    filtered_data = data[~data.index.isin(outliers.index)]
+    
+    return filtered_data
+
+filtered_merged_df = find_and_remove_outliers(merged_df)
+
+# Summary statistics before removing outliers
+print("Summary statistics before removing outliers:")
+print(merged_df.describe())
+
+# Summary statistics after removing outliers
+print("\nSummary statistics after removing outliers:")
+print(filtered_merged_df.describe())
+
+#print(merged_df)
+merged_df.to_csv('merged_cleaned_dataset.csv', index=False)
 
 # Specify the columns you need for your model
 columns_needed = ['temp', 'humidity', 'precip', 'windspeed'] 
@@ -58,21 +115,13 @@ print(merged_df.describe())  # Statistical summary
 print("\nCorrelation Matrix:")
 print(x.corr())  # Correlation between features
 
-# Create a box plot for each feature in the dataset
-plt.figure(figsize=(10, 6))
-sns.boxplot(data=x)
-plt.title("Box Plot of Features")
-plt.xlabel("Features")
-plt.ylabel("Values")
+# Pairplot to see relationships between variables
+sns.pairplot(merged_df[columns_needed + ['conditions']])
 plt.show()
 
 # Histograms of each feature
 x.hist(figsize=(12, 8))
-plt.suptitle("Feature Distributions")
-plt.show()
-
-# Pairplot to see relationships between variables
-sns.pairplot(merged_df[columns_needed + ['conditions']])
+plt.suptitle("Historgram")
 plt.show()
 
 # Step 6. Split the data into training and testing sets
@@ -119,43 +168,3 @@ print(confusion_matrix(y_test, y_pred_knn))
 # Step 9. Save the merged and cleaned dataset
 merged_df.to_csv('merged_cleaned_dataset.csv', index=False)
 print("\nMerged dataset saved as 'merged_cleaned_dataset.csv'")
-
-# Function to plot decision boundaries
-def plot_decision_boundary(model, x, y, ax, title):
-    x_min, x_max = x[:, 0].min() - 1, x[:, 0].max() + 1
-    y_min, y_max = x[:, 1].min() - 1, x[:, 1].max() + 1
-    xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.01),
-                         np.arange(y_min, y_max, 0.01))
-    
-    Z = model.predict(np.c_[xx.ravel(), yy.ravel()])
-    Z = Z.reshape(xx.shape)
-
-    # Plot decision boundary
-    ax.contourf(xx, yy, Z, alpha=0.4, cmap='coolwarm')
-    ax.scatter(x[:, 0], x[:, 1], c=y, cmap='coolwarm', edgecolors='k')
-    ax.set_title(title)
-    ax.set_xlabel('Feature 1')
-    ax.set_ylabel('Feature 2')
-
-# Plotting for Logistic Regression and KNN
-fig, ax = plt.subplots(1, 2, figsize=(12, 6))
-
-# Using only the first two features for visualization
-x_train_2D = x_train_scaled[:, :2]
-x_test_2D = x_test_scaled[:, :2]
-
-# Train models again using only the first two features for visualization
-log_reg_2D = LogisticRegression(random_state=42)
-log_reg_2D.fit(x_train_2D, y_train)
-
-knn_2D = KNeighborsClassifier(n_neighbors=5)
-knn_2D.fit(x_train_2D, y_train)
-
-# Plot Logistic Regression decision boundary
-plot_decision_boundary(log_reg_2D, x_test_2D, y_test, ax[0], "Logistic Regression")
-
-# Plot KNN decision boundary
-plot_decision_boundary(knn_2D, x_test_2D, y_test, ax[1], "KNN")
-
-plt.tight_layout()
-plt.show()
