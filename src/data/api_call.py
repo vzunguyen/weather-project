@@ -21,7 +21,7 @@ def get_data(url):
         return None
     
 def main():
-    LOCATION = 'London'
+    LOCATION = input('Enter the location (e.g., London, Paris): ')
     data = get_data(f"http://api.weatherapi.com/v1/current.json?key=e17fd8ecf740460b95602417241609&q={LOCATION}")
 
     if data:
