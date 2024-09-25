@@ -7,16 +7,12 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, classification_report
-import os
-
-# Change directory to the location of the merged dataset
-os.chdir('/Users/vzu/Projects/weather-project/data/raw')
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay
 
 # Step 1. Load the datasets
 df1 = pd.read_csv('nyc_weather.csv')
-df2 = pd.read_csv('energy_usage.csv')
-df3 = pd.read_csv('cleaned_energy_effeciency.csv')
+df2 = pd.read_csv('energy_usage1.csv')
+df3 = pd.read_csv('cleaned_energy_effeciency1.csv')
 
 # Step 2. Inspect the datasets
 print("Dataset 1 Info:")
@@ -113,7 +109,15 @@ print("\nDescriptive Statistics:")
 print(merged_df.describe())  # Statistical summary
 
 print("\nCorrelation Matrix:")
-print(x.corr())  # Correlation between features
+correlation_matrix = x.corr()
+print(correlation_matrix)  # Correlation between features
+# Create a heatmap to visualize the correlation matrix
+plt.figure(figsize=(10, 8))  # Set the figure size
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1, cbar=True, square=True, linewidths=0.5)
+
+# Customize the plot
+plt.title('Correlation Matrix Heatmap')
+plt.show()
 
 # Pairplot to see relationships between variables
 sns.pairplot(merged_df[columns_needed + ['conditions']])
@@ -149,6 +153,15 @@ print(f"F1-Score: {f1_score(y_test, y_pred, average='macro'):.2f}")
 print("\nConfusion Matrix:")
 print(confusion_matrix(y_test, y_pred))
 
+# Display the confusion matrix
+labels = ['Rainy', 'Snow', 'Partially Cloudy', 'Clear', 'Overcast']
+disp = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix(y_test, y_pred), display_labels=labels)
+disp.plot(cmap='Blues')
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.title('Confusion Matrix')
+plt.show()
+
 # Step 8. K-Nearest Neighbors (KNN) Model
 knn = KNeighborsClassifier(n_neighbors=5)
 knn.fit(x_train_scaled, y_train)
@@ -165,6 +178,16 @@ print(f"F1-Score: {f1_score(y_test, y_pred_knn, average='macro'):.2f}")
 print("\nConfusion Matrix:")
 print(confusion_matrix(y_test, y_pred_knn))
 
+# Display the confusion matrix
+labels = ['Rainy', 'Snow', 'Partially Cloudy', 'Clear', 'Overcast']
+disp = ConfusionMatrixDisplay(confusion_matrix(y_test, y_pred_knn), display_labels=labels)
+disp.plot(cmap='Greens')
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.title('Confusion Matrix')
+plt.show()
+
 # Step 9. Save the merged and cleaned dataset
 merged_df.to_csv('merged_cleaned_dataset.csv', index=False)
 print("\nMerged dataset saved as 'merged_cleaned_dataset.csv'")
+
