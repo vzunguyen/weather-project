@@ -13,5 +13,7 @@ See in the [setup folder](/setup/README.md)
 
 ## Data
 [Current Weather API](https://www.weatherapi.com/docs/)
+
 [NYC Building Energy and Water Data Disclosure](https://data.cityofnewyork.us/Environment/NYC-Building-Energy-and-Water-Data-Disclosure-for-/5zyy-y8am/about_data)
+
 [NYC Weather Data](https://www.kaggle.com/datasets/ahmadrezarostamani/nyc-weather)
