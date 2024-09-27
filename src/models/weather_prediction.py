@@ -2,12 +2,12 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, PolynomialFeatures
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay
+from sklearn.linear_model import LogisticRegression, LinearRegression
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay, mean_squared_error, mean_absolute_error, r2_score
 
 # Step 1. Load the datasets
 df1 = pd.read_csv('nyc_weather.csv')
@@ -36,21 +36,6 @@ df1_cleaned = df1_cleaned.drop_duplicates()
 df2_cleaned = df2_cleaned.drop_duplicates()
 df3_cleaned = df3_cleaned.drop_duplicates()
 
-# Function to remove outliers using IQR
-def remove_outliers_iqr(df1, columns):
-    Q1 = df1[columns].quantile(0.25)
-    Q3 = df1[columns].quantile(0.75)
-    IQR = Q3 - Q1
-
-    # Define the bounds for non-outliers
-    lower_bound = Q1 - 1.5 * IQR
-    upper_bound = Q3 + 1.5 * IQR
-
-    # Filter the dataset to remove outliers
-    df1_cleaned = df1[~((df1[columns] < lower_bound) | (df1[columns] > upper_bound)).any(axis=1)]
-
-    return df1_cleaned
-
 # Applying the function to remove outliers
 columns_needed = ['temp', 'humidity', 'precip', 'windspeed']  # Specify the columns to check for outliers
 
@@ -58,6 +43,7 @@ columns_needed = ['temp', 'humidity', 'precip', 'windspeed']  # Specify the colu
 merged_df = pd.concat([df1, df2, df3], axis=1)
 merged_df.fillna({'preciptype': 'null'}, inplace=True)
 
+# Outliers
 def find_and_remove_outliers(data):
     outliers_dict = {}
     
@@ -101,15 +87,15 @@ columns_needed = ['temp', 'humidity', 'precip', 'windspeed']
 # Step 5. Preprocess the data
 # Assuming 'conditions' is the target variable (for classification)
 # Separate features (x) and target (y)
-x = merged_df[columns_needed]
-y = merged_df['conditions']  
+x_cls = merged_df[columns_needed]
+y_cls = merged_df['conditions']  
 
 # Step 6. Data Exploration
 print("\nDescriptive Statistics:")
 print(merged_df.describe())  # Statistical summary
 
 print("\nCorrelation Matrix:")
-correlation_matrix = x.corr()
+correlation_matrix = x_cls.corr()
 print(correlation_matrix)  # Correlation between features
 # Create a heatmap to visualize the correlation matrix
 plt.figure(figsize=(10, 8))  # Set the figure size
@@ -119,43 +105,39 @@ sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1, cb
 plt.title('Correlation Matrix Heatmap')
 plt.show()
 
-# Pairplot to see relationships between variables
-sns.pairplot(merged_df[columns_needed + ['conditions']])
-plt.show()
-
 # Histograms of each feature
-x.hist(figsize=(12, 8))
+x_cls.hist(figsize=(12, 8))
 plt.suptitle("Historgram")
 plt.show()
 
-# Step 6. Split the data into training and testing sets
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+# Step 6. Split the data into training and testing sets (80% - Training  20% - Test)
+x_train_cls, x_test_cls, y_train_cls, y_test_cls = train_test_split(x_cls, y_cls, test_size=0.2, random_state=42)
 
 # Scale the features
+columns_to_normalize = merged_df.select_dtypes(include=['float64', 'int64']).columns
 scaler = StandardScaler() 
-x_train_scaled = scaler.fit_transform(x_train)
-x_test_scaled = scaler.fit_transform(x_test)
+merged_df[columns_to_normalize] = scaler.fit_transform(merged_df[columns_to_normalize])
 
 # Step 7. Logistic Regression Model
 log_reg = LogisticRegression(random_state=42)
-log_reg.fit(x_train_scaled,y_train)
+log_reg.fit(x_train_cls,y_train_cls)
 
 # Make predictions
-y_pred = log_reg.predict(x_test_scaled)
-y_prob = log_reg.predict(x_test_scaled)
+y_pred_cls = log_reg.predict(x_test_cls)
+y_prob_cls = log_reg.predict(x_test_cls)
 
 # Evaluate Logistic Regression Model
 print("\nLogistic Regression Evaluation:")
-print(f"Accuracy: {accuracy_score(y_test, y_pred):.2f}")
-print(f"Precision: {precision_score(y_test, y_pred, average='macro', zero_division=0):.2f}")
-print(f"Recall: {recall_score(y_test, y_pred, average='macro'):.2f}")
-print(f"F1-Score: {f1_score(y_test, y_pred, average='macro'):.2f}")
+print(f"Accuracy: {accuracy_score(y_test_cls, y_pred_cls):.2f}")
+print(f"Precision: {precision_score(y_test_cls, y_pred_cls, average='macro', zero_division=0):.2f}")
+print(f"Recall: {recall_score(y_test_cls, y_pred_cls, average='macro'):.2f}")
+print(f"F1-Score: {f1_score(y_test_cls, y_pred_cls, average='macro'):.2f}")
 print("\nConfusion Matrix:")
-print(confusion_matrix(y_test, y_pred))
+print(confusion_matrix(y_test_cls, y_pred_cls))
 
 # Display the confusion matrix
-labels = ['Rainy', 'Snow', 'Partially Cloudy', 'Clear', 'Overcast']
-disp = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix(y_test, y_pred), display_labels=labels)
+labels = ['Rain', 'Snow', 'Partially Cloudy', 'Clear', 'Overcast']
+disp = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix(y_test_cls, y_pred_cls), display_labels=labels)
 disp.plot(cmap='Blues')
 plt.xlabel('Predicted')
 plt.ylabel('Actual')
@@ -164,27 +146,70 @@ plt.show()
 
 # Step 8. K-Nearest Neighbors (KNN) Model
 knn = KNeighborsClassifier(n_neighbors=5)
-knn.fit(x_train_scaled, y_train)
+knn.fit(x_train_cls, y_train_cls)
 
 # Make predictions
-y_pred_knn = knn.predict(x_test_scaled)
+y_pred_knn = knn.predict(x_test_cls)
 
 # Evaluate KNN Model
 print("\nKNN Evaluation:")
-print(f"Accuracy: {accuracy_score(y_test, y_pred_knn):.2f}")
-print(f"Precision: {precision_score(y_test, y_pred_knn, average='macro', zero_division=0):.2f}")
-print(f"Recall: {recall_score(y_test, y_pred_knn, average='macro', zero_division=0):.2f}")
-print(f"F1-Score: {f1_score(y_test, y_pred_knn, average='macro'):.2f}")
+print(f"Accuracy: {accuracy_score(y_test_cls, y_pred_knn):.2f}")
+print(f"Precision: {precision_score(y_test_cls, y_pred_knn, average='macro', zero_division=0):.2f}")
+print(f"Recall: {recall_score(y_test_cls, y_pred_knn, average='macro', zero_division=0):.2f}")
+print(f"F1-Score: {f1_score(y_test_cls, y_pred_knn, average='macro'):.2f}")
 print("\nConfusion Matrix:")
-print(confusion_matrix(y_test, y_pred_knn))
+print(confusion_matrix(y_test_cls, y_pred_knn))
 
 # Display the confusion matrix
-labels = ['Rainy', 'Snow', 'Partially Cloudy', 'Clear', 'Overcast']
-disp = ConfusionMatrixDisplay(confusion_matrix(y_test, y_pred_knn), display_labels=labels)
+labels = ['Rain', 'Snow', 'Partially Cloudy', 'Clear', 'Overcast']
+disp = ConfusionMatrixDisplay(confusion_matrix(y_test_cls, y_pred_knn), display_labels=labels)
 disp.plot(cmap='Greens')
 plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.title('Confusion Matrix')
+plt.show()
+
+# Step 10. Polynomial Regression for Electricity Usage
+# Select the necessary columns for polynomial regression
+poly_columns_needed = ['temp', 'Electricity Use - Grid Purchase and Generated from Onsite Renewable Systems (kWh)']
+
+# Separate features (X) and target (y) for polynomial regression
+X_poly = merged_df[['temp']]  
+y_poly = merged_df['Electricity Use - Grid Purchase and Generated from Onsite Renewable Systems (kWh)']  # Target: Electricity usage
+
+# Create polynomial features (degree 2 for U-shaped trend)
+poly = PolynomialFeatures(degree=6)
+X_poly_transformed = poly.fit_transform(X_poly)  # Transform the temperature data into polynomial features
+
+# Split the data (80% training, 20% testing)
+X_train_poly, X_test_poly, y_train_poly, y_test_poly = train_test_split(X_poly_transformed, y_poly, test_size=0.2, random_state=42)
+
+# Initialize the polynomial regression model
+poly_model = LinearRegression()
+
+# Train the polynomial regression model
+poly_model.fit(X_train_poly, y_train_poly)
+
+# Predict electricity usage for the test set
+y_pred_poly = poly_model.predict(X_test_poly)
+
+# Evaluate the polynomial regression model
+mae_poly = mean_absolute_error(y_test_poly, y_pred_poly)
+mse_poly = mean_squared_error(y_test_poly, y_pred_poly)
+r2_poly = r2_score(y_test_poly, y_pred_poly)
+
+print(f"\nPolynomial Regression Evaluation:")
+print(f"Mean Absolute Error (MAE): {mae_poly:.2f}")
+print(f"Mean Squared Error (MSE): {mse_poly:.2f}")
+print(f"R-Squared (R²): {r2_poly:.2f}")
+
+# Scatter plot of actual vs predicted values for polynomial regression
+plt.scatter(X_test_poly[:, 1], y_test_poly, color='blue', label='Actual')  # Using X_test_poly[:, 1] to get the temperature values
+plt.scatter(X_test_poly[:, 1], y_pred_poly, color='red', label='Predicted')
+plt.title('Actual vs Predicted Electricity Usage')
+plt.xlabel('Temperature (°C)')
+plt.ylabel('Electricity Usage (kWh)')
+plt.legend()
 plt.show()
 
 # Step 9. Save the merged and cleaned dataset
