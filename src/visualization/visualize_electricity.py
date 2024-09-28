@@ -9,16 +9,36 @@ os.chdir('/Users/vzu/Projects/weather-project/data/processed')
 # Load the dataset
 df = pd.read_csv('merged_cleaned_dataset.csv')
 
+# Inspect the dataset
+print("\nDataset Info:")
+print(df.info())
+
 # Select the necessary columns
 columns_needed = ['temp', 'Electricity Use - Grid Purchase and Generated from Onsite Renewable Systems (kWh)']
 
 # Sort the data by temperature for a smoother line plot
 df_sorted = df[columns_needed].sort_values(by='temp')
 
+# Descriptive statistics
+print("\nDescriptive Statistics:")
+print(df_sorted.describe())
+
+# Correlation matrix
+correlation_matrix = df_sorted.corr()
+print("Correlation Matrix:")
+print(correlation_matrix)
+
+#`Heatmap`
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1, cbar=True, square=True, linewidths=0.5)
+plt.title('Correlation Matrix Heatmap', fontsize=16)
+
+plt.show()
+
+# Line plot for Temperature vs. Electricity Usage
 # Set up the figure size
 plt.figure(figsize=(10, 6))
 
-# 1. Line plot for Temperature vs. Electricity Usage
 # Plot temperature vs. electricity usage
 sns.lineplot(x='temp', y='Electricity Use - Grid Purchase and Generated from Onsite Renewable Systems (kWh)', data=df_sorted)
 
@@ -30,30 +50,7 @@ plt.ylabel('Electricity Usage (kWh)', fontsize=12)
 # Show the plot
 plt.show()
 
-# Set up the figure size
-plt.figure(figsize=(12, 6))
-
-# 2. Histogram for Temperature
-plt.subplot(1, 2, 1)
-sns.histplot(df['temp'], bins=30, kde=True, color='blue')
-plt.title('Temperature Distribution')
-plt.xlabel('Temperature (°C)')
-plt.ylabel('Frequency')
-
-# 2. Histogram for Electricity Usage
-plt.subplot(1, 2, 2)
-sns.histplot(df['Electricity Use - Grid Purchase and Generated from Onsite Renewable Systems (kWh)'], bins=30, kde=True, color='green')
-plt.title('Electricity Usage Distribution')
-plt.xlabel('Electricity Usage (kWh)')
-plt.ylabel('Frequency')
-
-# Adjust layout
-plt.tight_layout()
-
-# Show the plot
-plt.show()
-
-# 3. Scatterplot
+#  Scatterplot
 # Step 1: Create a scatter plot (Point and Figure-like chart)
 plt.figure(figsize=(10, 6))
 

@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import matplotlib.pyplot as plt
+import numpy as np
 import os
 
 # Change directory to the location of the merged dataset
@@ -19,8 +20,7 @@ columns_needed = ['temp', 'Electricity Use - Grid Purchase and Generated from On
 X = df[['temp']]  # Feature: Temperature
 y = df['Electricity Use - Grid Purchase and Generated from Onsite Renewable Systems (kWh)']  # Target: Electricity usage
 
-# Create polynomial features (degree 2 for U-shaped trend)
-poly = PolynomialFeatures(degree=2)
+poly = PolynomialFeatures(degree=5)
 X_poly = poly.fit_transform(X)  # Transform the temperature data into polynomial features
 
 # Split the data (80% training, 20% testing)
@@ -44,11 +44,20 @@ print(f"Mean Absolute Error (MAE): {mae:.2f}")
 print(f"Mean Squared Error (MSE): {mse:.2f}")
 print(f"R-Squared (R²): {r2:.2f}")
 
-# Scatter plot of actual vs predicted values
-plt.scatter(X_test[:, 1], y_test, color='blue', label='Actual')  # Using X_test[:, 1] to get the temperature values
-plt.scatter(X_test[:, 1], y_pred, color='red', label='Predicted')
-plt.title('Actual vs Predicted Electricity Usage')
+# VISULIZATION
+# Step 1: Sort the test set for smooth line chart plotting
+sorted_indices = np.argsort(X_test[:, 1])  # Sort based on the temperature values
+X_test_sorted = X_test[sorted_indices]
+y_test_sorted = y_test.iloc[sorted_indices]
+y_pred_sorted = y_pred[sorted_indices]
+
+# Step 2: Line chart for actual vs predicted electricity usage
+plt.figure(figsize=(10, 6))
+plt.plot(X_test_sorted[:, 1], y_test_sorted, color='blue', label='Actual Usage', linestyle='-', marker='o')  # Actual values
+plt.plot(X_test_sorted[:, 1], y_pred_sorted, color='red', label='Predicted Usage', linestyle='--', marker='x')  # Predicted values
+plt.title('Line Chart: Actual vs Predicted Electricity Usage')
 plt.xlabel('Temperature (°C)')
 plt.ylabel('Electricity Usage (kWh)')
 plt.legend()
+plt.grid(True)
 plt.show()
