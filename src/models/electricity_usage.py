@@ -13,6 +13,8 @@ os.chdir('/Users/vzu/Projects/weather-project/data/processed')
 # Load the dataset
 df = pd.read_csv('merged_cleaned_dataset.csv')
 
+
+
 # Select the necessary columns
 columns_needed = ['temp', 'Electricity Use - Grid Purchase and Generated from Onsite Renewable Systems (kWh)']
 
@@ -45,6 +47,7 @@ print(f"Mean Squared Error (MSE): {mse:.2f}")
 print(f"R-Squared (R²): {r2:.2f}")
 
 # VISULIZATION
+# Line chart for actual vs predicted electricity usage
 # Step 1: Sort the test set for smooth line chart plotting
 sorted_indices = np.argsort(X_test[:, 1])  # Sort based on the temperature values
 X_test_sorted = X_test[sorted_indices]
@@ -60,4 +63,13 @@ plt.xlabel('Temperature (°C)')
 plt.ylabel('Electricity Usage (kWh)')
 plt.legend()
 plt.grid(True)
+plt.show()
+
+# Scatter plot for actual vs predicted electricity usage
+plt.scatter(X_test[:, 1], y_test, color='blue', label='Actual')  # Using X_test[:, 1] to get the temperature values
+plt.scatter(X_test[:, 1], y_pred, color='red', label='Predicted')
+plt.title('Actual vs Predicted Electricity Usage')
+plt.xlabel('Temperature (°C)')
+plt.ylabel('Electricity Usage (kWh)')
+plt.legend()
 plt.show()
