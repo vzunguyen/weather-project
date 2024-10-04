@@ -13,8 +13,6 @@ os.chdir('/Users/vzu/Projects/weather-project/data/processed')
 # Load the dataset
 df = pd.read_csv('merged_cleaned_dataset.csv')
 
-
-
 # Select the necessary columns
 columns_needed = ['temp', 'Electricity Use - Grid Purchase and Generated from Onsite Renewable Systems (kWh)']
 
@@ -22,7 +20,7 @@ columns_needed = ['temp', 'Electricity Use - Grid Purchase and Generated from On
 X = df[['temp']]  # Feature: Temperature
 y = df['Electricity Use - Grid Purchase and Generated from Onsite Renewable Systems (kWh)']  # Target: Electricity usage
 
-poly = PolynomialFeatures(degree=5)
+poly = PolynomialFeatures(degree=3)
 X_poly = poly.fit_transform(X)  # Transform the temperature data into polynomial features
 
 # Split the data (80% training, 20% testing)
@@ -72,4 +70,16 @@ plt.title('Actual vs Predicted Electricity Usage')
 plt.xlabel('Temperature (°C)')
 plt.ylabel('Electricity Usage (kWh)')
 plt.legend()
+plt.show()
+
+# Residual plot
+residuals = y_test - y_pred
+plt.figure(figsize=(10, 6))
+plt.scatter(y_pred, residuals, color='purple', marker='o', label='Residuals')
+plt.axhline(0, color='black', linestyle='--', linewidth=1)
+plt.title('Residual Plot')
+plt.xlabel('Predicted Electricity Usage (kWh)')
+plt.ylabel('Residuals')
+plt.legend()
+plt.grid(True)
 plt.show()
