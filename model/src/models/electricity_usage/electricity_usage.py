@@ -8,7 +8,7 @@ import numpy as np
 import os
 
 # Change directory to the location of the merged dataset
-os.chdir('/Users/vzu/Projects/weather-project/data/processed')
+os.chdir('/Users/vzu/Projects/weather-project/model/data/processed')
 
 # Load the dataset
 df = pd.read_csv('merged_cleaned_dataset.csv')
@@ -31,6 +31,11 @@ model = LinearRegression()
 
 # Train the model
 model.fit(X_train, y_train)
+
+# Save the trained model
+import joblib
+joblib.dump(model, '../../models/electricity_trained_model.pkl')
+print("Model saved as 'electricity_trained_model.pkl'")
 
 # Predict electricity usage for the test set
 y_pred = model.predict(X_test)
@@ -83,3 +88,18 @@ plt.ylabel('Residuals')
 plt.legend()
 plt.grid(True)
 plt.show()
+
+# Creating a DataFrame with actual and predicted values
+prediction_df = pd.DataFrame({
+    'Temperature (°C)': X_test[:, 1],  # Using temperature values from X_test
+    'Actual Electricity Usage (kWh)': y_test.values,  # Actual electricity usage
+    'Predicted Electricity Usage (kWh)': y_pred  # Predicted electricity usage
+})
+
+# Change directory
+os.chdir('/Users/vzu/Projects/weather-project/model/data/predicted')
+
+# Saving the DataFrame to a CSV file
+prediction_df.to_csv('electricity_usage_predictions.csv', index=False)
+
+print("Predictions saved to 'electricity_usage_predictions.csv'")

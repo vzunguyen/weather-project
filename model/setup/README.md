@@ -28,12 +28,12 @@ conda config --set solver libmamba
 ## 3. Create virtual environment
 
 ```
-conda create -n weather python=3.11
+conda create -n sklearn-env python=3.11
 ```
 
 Activate the virtual environment:
 ```
-conda activate weather
+conda activate sklearn-env
 ```
 
 Deactivate:
@@ -54,6 +54,5 @@ conda install seaborn
 
 ## 6. Install Scikit-learn and active environment
 ```
-conda create -n sklearn-env -c conda-forge scikit-learn
-conda activate sklearn-env
+conda install scikit-learn
 ```
