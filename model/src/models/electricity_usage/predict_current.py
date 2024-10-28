@@ -19,11 +19,6 @@ new_data = pd.DataFrame({
     'temp_c': [data['current']['temp_c']]  # Wrap in a list to avoid scalar value error
 })
 
-# Optionally, if you have multiple temperature values, you can extend this like:
-# new_data = pd.DataFrame({
-#     'temp_c': data['current']['temp_c'].values  # Assuming you have a series or array
-# })
-
 # Step 3. Transform the new data to match the polynomial features used in training
 poly = PolynomialFeatures(degree=3)
 new_data_poly = poly.fit_transform(new_data)
