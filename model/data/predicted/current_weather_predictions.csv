@@ -1,0 +1,2 @@
+temp_c,wind_kph,humidity,pressure_mb,Predicted Weather Type,Predicted Weather Type (KNN)
+14.4,5.8,94,1026.0,Clear,Partially cloudy

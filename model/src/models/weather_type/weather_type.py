@@ -1,17 +1,14 @@
 import pandas as pd
 import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler, PolynomialFeatures
+from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
-from sklearn.linear_model import LinearRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay, mean_squared_error, mean_absolute_error, r2_score
 import os
 
 # Change directory to the location of the processed dataset
-os.chdir('/Users/vzu/Projects/weather-project/data/processed')
+os.chdir('/Users/vzu/Projects/weather-project/model/data/processed')
 
 # Step 1. Load the datasets
 df1 = pd.read_csv('nyc_weather.csv')
@@ -98,18 +95,6 @@ print(merged_df.describe())  # Statistical summary
 print("\nCorrelation Matrix:")
 correlation_matrix = x_cls.corr()
 print(correlation_matrix)  # Correlation between features
-# Create a heatmap to visualize the correlation matrix
-plt.figure(figsize=(10, 8))  # Set the figure size
-sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1, cbar=True, square=True, linewidths=0.5)
-
-# Customize the plot
-plt.title('Correlation Matrix Heatmap')
-plt.show()
-
-# Histograms of each feature
-x_cls.hist(figsize=(12, 8))
-plt.suptitle("Histogram")
-plt.show()
 
 # Step 6. Split the data into training and testing sets (80% - Training  20% - Test)
 x_train_cls, x_test_cls, y_train_cls, y_test_cls = train_test_split(x_cls, y_cls, test_size=0.2, random_state=42)
@@ -123,6 +108,11 @@ merged_df[columns_to_normalize] = scaler.fit_transform(merged_df[columns_to_norm
 log_reg = LogisticRegression(random_state=42)
 log_reg.fit(x_train_cls,y_train_cls)
 
+# Save the trained model
+import joblib
+joblib.dump(log_reg, '../../models/reg_trained_model.pkl')
+print("Model saved as 'reg_trained_model.pkl'")
+
 # Make predictions
 y_pred_cls = log_reg.predict(x_test_cls)
 
@@ -131,37 +121,23 @@ y_pred_cls = log_reg.predict(x_test_cls)
 unique_classes = np.unique(y_test_cls)
 print("Unique classes:", unique_classes)
 
-# Display the confusion matrix using the unique classes as labels
-disp = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix(y_test_cls, y_pred_cls), display_labels=unique_classes)
-disp.plot(cmap='Blues')
-
-plt.xlabel('Predicted')
-plt.ylabel('Actual')
-plt.title('Confusion Matrix (Logistic Regression)')
-plt.show()
-
 # Logistic Regression Evaluation
 print("\nLogistic Regression Evaluation:")
 print(f"Accuracy: {accuracy_score(y_test_cls, y_pred_cls):.2f}")
 print(f"Precision: {precision_score(y_test_cls, y_pred_cls, average='macro', zero_division=0):.2f}")
-print(f"Recall: {recall_score(y_test_cls, y_pred_cls, average='macro'):.2f}")
-print(f"F1-Score: {f1_score(y_test_cls, y_pred_cls, average='macro'):.2f}")
+print(f"Recall: {recall_score(y_test_cls, y_pred_cls, average='macro', zero_division=0):.2f}")
+print(f"F1-Score: {f1_score(y_test_cls, y_pred_cls, average='macro', zero_division=0):.2f}")
 
 # Step 9. K-Nearest Neighbors (KNN) Model
 knn = KNeighborsClassifier(n_neighbors=5)
 knn.fit(x_train_cls, y_train_cls)
 
+import joblib
+joblib.dump(knn, '../../models/knn_trained_model.pkl')
+print("Model saved as 'knn_trained_model.pkl'")
+
 # Make predictions
 y_pred_knn = knn.predict(x_test_cls)
-
-# Confusion Matrix for KNN
-disp = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix(y_test_cls, y_pred_knn), display_labels=unique_classes)
-disp.plot(cmap='Greens')
-
-plt.xlabel('Predicted')
-plt.ylabel('Actual')
-plt.title('Confusion Matrix (KNN)')
-plt.show()
 
 # KNN Evaluation
 print("\nKNN Evaluation:")
@@ -170,48 +146,11 @@ print(f"Precision: {precision_score(y_test_cls, y_pred_knn, average='macro', zer
 print(f"Recall: {recall_score(y_test_cls, y_pred_knn, average='macro', zero_division=0):.2f}")
 print(f"F1-Score: {f1_score(y_test_cls, y_pred_knn, average='macro'):.2f}")
 
-# Step 10. Polynomial Regression for Electricity Usage
-# Load the dataset
-merged_df = pd.read_csv('merged_cleaned_dataset.csv')
+# Step 11. Save the merged and cleaned dataset
+# Change directory
+os.chdir('/Users/vzu/Projects/weather-project/model/data/predicted')
 
-# Select the necessary columns for polynomial regression
-poly_columns_needed = ['temp', 'Electricity Use - Grid Purchase and Generated from Onsite Renewable Systems (kWh)']
+# Saving the DataFrame to a CSV file
+merged_df.to_csv('weather_predictions.csv', index=False)
 
-# Separate features (X) and target (y) for polynomial regression
-X_poly = merged_df[['temp']]  
-y_poly = merged_df['Electricity Use - Grid Purchase and Generated from Onsite Renewable Systems (kWh)']  # Target: Electricity usage
-
-# Create polynomial features
-poly = PolynomialFeatures(degree=5)
-X_poly_transformed = poly.fit_transform(X_poly)  # Transform the temperature data into polynomial features
-
-# Split the data (80% training, 20% testing)
-X_train_poly, X_test_poly, y_train_poly, y_test_poly = train_test_split(X_poly_transformed, y_poly, test_size=0.2, random_state=42)
-
-# Initialize the polynomial regression model
-poly_model = LinearRegression()
-
-# Train the polynomial regression model
-poly_model.fit(X_train_poly, y_train_poly)
-
-# Predict electricity usage for the test set
-y_pred_poly = poly_model.predict(X_test_poly)
-
-# Evaluate the polynomial regression model
-mae_poly = mean_absolute_error(y_test_poly, y_pred_poly)
-mse_poly = mean_squared_error(y_test_poly, y_pred_poly)
-r2_poly = r2_score(y_test_poly, y_pred_poly)
-
-print(f"\nPolynomial Regression Evaluation:")
-print(f"Mean Absolute Error (MAE): {mae_poly:.2f}")
-print(f"Mean Squared Error (MSE): {mse_poly:.2f}")
-print(f"R-Squared (R²): {r2_poly:.2f}")
-
-# Scatter plot of actual vs predicted values for polynomial regression
-plt.scatter(X_test_poly[:, 1], y_test_poly, color='blue', label='Actual')  # Using X_test_poly[:, 1] to get the temperature values
-plt.scatter(X_test_poly[:, 1], y_pred_poly, color='red', label='Predicted')
-plt.xlabel('Temperature')
-plt.ylabel('Electricity Usage')
-plt.title('Actual vs Predicted Electricity Usage (Polynomial Regression)')
-plt.legend()
-plt.show()
+print("Predictions saved to 'weather_predictions.csv'")
