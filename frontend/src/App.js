@@ -1,10 +1,18 @@
-import logo from "./logo.svg";
-import "./App.css";
-import About from "./pages/About";
+import React from 'react';
+import TeamMember from './pages/About Us.js';
+import NavBar from './components/navbar.js';              // Import NavBar component
+import WeatherHomePage from './pages/Home.js'; // Import WeatherHomePage component 
+import Footer from './components/footer.js';              // Import Footer component
+import logo from './logo.svg';              // Assuming you have a logo in your src folder
+import './App.css';                         // Optional: Import global CSS (if any)
 
 function App() {
   return (
     <div className="App">
+      {/* Render the NavBar at the top */}
+      <NavBar />
+
+      {/* Existing header content */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,7 +27,15 @@ function App() {
           Learn React
         </a>
       </header>
-      <About />
+
+      {/* Render the main content (weather information) */}
+      <WeatherHomePage />
+
+      {/* Render the main content (weather information) */}
+      <TeamMember />
+
+      {/* Render the Footer at the bottom */}
+      <Footer />
     </div>
   );
 }
