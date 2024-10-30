@@ -1,20 +1,9 @@
-from typing import Union
+# backend/main.py
 
 from fastapi import FastAPI
+from backend.routers import predictions  # Import the prediction router
 
 app = FastAPI()
 
-# GET - GET AN INFO
-# POST - CREATE SOMETHING NEW
-# PUT - UPDATE
-# DELETE - DELETE AN INFO
-
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
+# Include the predictions router
+app.include_router(predictions.router)

@@ -29,7 +29,7 @@ scaler.fit(df)  # Fit the scaler to the current weather data
 scaled_data = scaler.transform(df)
 
 # Step 4. Load pre-trained model(s)
-log_reg = joblib.load('../../models/weather_trained_model.pkl')  # Adjust path if necessary
+log_reg = joblib.load('../../models/reg_trained_model.pkl')  # Adjust path if necessary
 
 # Step 5. Make predictions
 y_pred_log = log_reg.predict(scaled_data)

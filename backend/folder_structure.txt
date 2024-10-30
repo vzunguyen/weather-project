@@ -3,6 +3,7 @@
    ├── __init__.py   # this file makes "app" a "Python package"
    ├── main.py       # Initializes the FastAPI application.
    ├── dependencies.py # Defines dependencies used by the routers
+   ├── data
    ├── routers
    │   ├── __init__.py
    │   ├── items.py  # Defines routes and endpoints related to items.
