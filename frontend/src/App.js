@@ -1,10 +1,11 @@
 import React from 'react';
-import TeamMember from './pages/About Us.js';
-import NavBar from './components/navbar.js';              // Import NavBar component
+import NavBar from './components/navbar.js'; // Import NavBar component
 import WeatherHomePage from './pages/Home.js'; // Import WeatherHomePage component 
-import Footer from './components/footer.js';              // Import Footer component
-import logo from './logo.svg';              // Assuming you have a logo in your src folder
-import './App.css';                         // Optional: Import global CSS (if any)
+import TeamMember from './pages/About Us.js';
+import Charts from './pages/Our Models.js';
+import Footer from './components/footer.js'; // Import Footer component
+import logo from './logo.svg'; // Assuming you have a logo in your src folder
+import './App.css'; // Optional: Import global CSS (if any)
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
 
       {/* Render the main content (weather information) */}
       <TeamMember />
+
+      {/* Render the main content (weather information) */}
+      <Charts />
 
       {/* Render the Footer at the bottom */}
       <Footer />
