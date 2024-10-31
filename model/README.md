@@ -1,7 +1,5 @@
 # Weather Prediction Model Project
-
-## Project Brief
-This project aims to provide the users with weather forecast, giving the user an overview statement of how the weather would feel like currently. Additionally, we also provide electricity predictions by using nyc historical weather and energy per building data.
+This folder contains the models for the project. These models will help predict the weather type and the electricity usage based on the given temperature.
 
 ## Models
 - Classification Models help predicting the weather conditions: Rain, Clear, e.t.c.
