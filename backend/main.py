@@ -1,20 +1,27 @@
-from typing import Union
+# backend/main.py
 
 from fastapi import FastAPI
+from backend.routers import router  # Import the prediction router
+from backend.utils.weather_cache import update_weather_data_periodically
+from contextlib import asynccontextmanager
+import asyncio
+
 
 app = FastAPI()
 
-# GET - GET AN INFO
-# POST - CREATE SOMETHING NEW
-# PUT - UPDATE
-# DELETE - DELETE AN INFO
+# Include the predictions router
+app.include_router(router.router)
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup event: Launch the periodic weather data update task
+    task = asyncio.create_task(update_weather_data_periodically())
+    yield  # Run the application
+    # Shutdown event: Cancel the weather update task and wait briefly for cleanup
+    task.cancel()
+    try:
+        await task
+    except asyncio.CancelledError:
+        pass
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
+app.router.lifespan_context = lifespan
