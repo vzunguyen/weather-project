@@ -17,6 +17,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 You can learn more about React in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 ## Files Structure
+```
 .
 ├── build                   # Compiled files (alternatively `dist`)
 ├── docs                    # Documentation files (alternatively `doc`)
@@ -29,3 +30,4 @@ You can learn more about React in the [Create React App documentation](https://f
 ├── tools                   # Tools and utilities
 ├── LICENSE
 └── README.md
+```
