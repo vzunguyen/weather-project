@@ -7,7 +7,6 @@ const WeatherHomePage = () => {
 
   return (
     <div className="weather-homepage">
-
       {/* Main Content */}
       <main className="weather-content">
         {/* Page Title */}
@@ -15,10 +14,10 @@ const WeatherHomePage = () => {
 
         {/* Search Bar */}
         <div className="search-bar">
-          <input 
-            type="text" 
-            placeholder={`Search for location (Default: ${location})`} 
-            onChange={(e) => setLocation(e.target.value)} 
+          <input
+            type="text"
+            placeholder={`Search for location (Default: ${location})`}
+            onChange={(e) => setLocation(e.target.value)}
           />
         </div>
 
