@@ -1,17 +1,15 @@
 import pandas as pd
 import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler, PolynomialFeatures
 from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import LinearRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay, mean_squared_error, mean_absolute_error, r2_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, mean_squared_error, mean_absolute_error, r2_score
 import os
 
 # Change directory to the location of the processed dataset
-os.chdir('/Users/vzu/Projects/weather-project/data/processed')
+os.chdir('/Users/vzu/Projects/weather-project/model/data/processed')
 
 # Step 1. Load the datasets
 df1 = pd.read_csv('nyc_weather.csv')
@@ -91,26 +89,6 @@ columns_needed = ['temp', 'humidity', 'precip', 'windspeed']
 x_cls = merged_df[columns_needed]
 y_cls = merged_df['conditions']  
 
-# Step 6. Data Exploration
-print("\nDescriptive Statistics:")
-print(merged_df.describe())  # Statistical summary
-
-print("\nCorrelation Matrix:")
-correlation_matrix = x_cls.corr()
-print(correlation_matrix)  # Correlation between features
-# Create a heatmap to visualize the correlation matrix
-plt.figure(figsize=(10, 8))  # Set the figure size
-sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1, cbar=True, square=True, linewidths=0.5)
-
-# Customize the plot
-plt.title('Correlation Matrix Heatmap')
-plt.show()
-
-# Histograms of each feature
-x_cls.hist(figsize=(12, 8))
-plt.suptitle("Histogram")
-plt.show()
-
 # Step 6. Split the data into training and testing sets (80% - Training  20% - Test)
 x_train_cls, x_test_cls, y_train_cls, y_test_cls = train_test_split(x_cls, y_cls, test_size=0.2, random_state=42)
 
@@ -126,21 +104,7 @@ log_reg.fit(x_train_cls,y_train_cls)
 # Make predictions
 y_pred_cls = log_reg.predict(x_test_cls)
 
-# Step 8. Confusion Matrix for Logistic Regression
-# Get unique classes dynamically
-unique_classes = np.unique(y_test_cls)
-print("Unique classes:", unique_classes)
-
-# Display the confusion matrix using the unique classes as labels
-disp = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix(y_test_cls, y_pred_cls), display_labels=unique_classes)
-disp.plot(cmap='Blues')
-
-plt.xlabel('Predicted')
-plt.ylabel('Actual')
-plt.title('Confusion Matrix (Logistic Regression)')
-plt.show()
-
-# Logistic Regression Evaluation
+# Step 8. Logistic Regression Evaluation
 print("\nLogistic Regression Evaluation:")
 print(f"Accuracy: {accuracy_score(y_test_cls, y_pred_cls):.2f}")
 print(f"Precision: {precision_score(y_test_cls, y_pred_cls, average='macro', zero_division=0):.2f}")
@@ -153,15 +117,6 @@ knn.fit(x_train_cls, y_train_cls)
 
 # Make predictions
 y_pred_knn = knn.predict(x_test_cls)
-
-# Confusion Matrix for KNN
-disp = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix(y_test_cls, y_pred_knn), display_labels=unique_classes)
-disp.plot(cmap='Greens')
-
-plt.xlabel('Predicted')
-plt.ylabel('Actual')
-plt.title('Confusion Matrix (KNN)')
-plt.show()
 
 # KNN Evaluation
 print("\nKNN Evaluation:")
@@ -207,11 +162,28 @@ print(f"Mean Absolute Error (MAE): {mae_poly:.2f}")
 print(f"Mean Squared Error (MSE): {mse_poly:.2f}")
 print(f"R-Squared (R²): {r2_poly:.2f}")
 
-# Scatter plot of actual vs predicted values for polynomial regression
-plt.scatter(X_test_poly[:, 1], y_test_poly, color='blue', label='Actual')  # Using X_test_poly[:, 1] to get the temperature values
-plt.scatter(X_test_poly[:, 1], y_pred_poly, color='red', label='Predicted')
-plt.xlabel('Temperature')
-plt.ylabel('Electricity Usage')
-plt.title('Actual vs Predicted Electricity Usage (Polynomial Regression)')
-plt.legend()
-plt.show()
+# Step 11. Merge Predicted Data for Weather Conditions and Electricity Usage
+
+# Create DataFrames for each model's predictions
+# Logistic Regression and KNN Predictions for Weather Conditions
+weather_predictions_df = pd.DataFrame({
+    'Actual Conditions': y_test_cls.reset_index(drop=True),
+    'Logistic Regression Prediction': y_pred_cls,
+    'KNN Prediction': y_pred_knn
+})
+
+# Polynomial Regression Prediction for Electricity Usage
+electricity_usage_df = pd.DataFrame({
+    'Temperature': X_test_poly[:, 1],  # Temperature from the polynomial test set
+    'Actual Electricity Usage': y_test_poly.reset_index(drop=True),
+    'Predicted Electricity Usage (Polynomial Regression)': y_pred_poly
+})
+
+# Concatenate the two prediction DataFrames side by side
+# Note: Make sure the row counts are the same; otherwise, align appropriately based on your index or identifier
+merged_predictions_df = pd.concat([weather_predictions_df, electricity_usage_df], axis=1)
+
+# Save the merged predictions to a CSV file
+merged_predictions_df.to_csv('/Users/vzu/Projects/weather-project/model/data/predicted/merged_predictions.csv', index=False)
+
+print("Merged predictions saved to 'merged_predictions.csv'")

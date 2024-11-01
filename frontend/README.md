@@ -5,8 +5,20 @@
 ```npm install react```
 - Install D3
 ```npm install d3```
-- Install Plotly
-```npm install plotly```
+- Install Chart.js
+```npm install react-chartjs-2 chart.js```
+- Install Papapars
+```pnpm install papapars```
+- Install axios
+```npm install axios```
+- Install Tailwind CSS
+```
+npm install -D tailwindcss
+npm install -D tailwindcss-animate
+```
+- Install Lucide React
+```npm install lucide-react```
+
 ## React Scripts
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,0 +1,181 @@
+Actual Conditions,Logistic Regression Prediction,KNN Prediction,Temperature,Actual Electricity Usage,Predicted Electricity Usage (Polynomial Regression)
+Partially cloudy,Partially cloudy,"Rain, Partially cloudy",24.3,638801.1,1207500.0474318094
+"Rain, Partially cloudy","Rain, Overcast","Rain, Partially cloudy",3.3,587241.7,975083.9824814767
+"Rain, Partially cloudy","Rain, Overcast","Rain, Partially cloudy",5.2,740396.2,983133.9745478895
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Overcast",16.4,711403.6,952221.965002919
+Clear,Partially cloudy,Clear,15.6,254003.8,936733.7944800772
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",26.6,2408573.0,1154573.9968356516
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",27.0,528523.7,1126745.1657658955
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",26.5,362205.6,1160490.5971411166
+"Rain, Partially cloudy",Clear,Clear,11.2,1649385.0,926718.0774087836
+Clear,"Snow, Rain, Ice, Partially cloudy",Clear,-4.1,587241.7,810281.0456738
+"Snow, Rain","Snow, Rain, Partially cloudy",Clear,-3.4,3903823.0,821374.4927200037
+"Rain, Overcast","Rain, Partially cloudy","Rain, Overcast",17.8,293107.7,990078.8781528138
+Partially cloudy,Partially cloudy,Partially cloudy,8.2,644861.6,961114.3154104688
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Overcast",20.1,151258.0,1075327.9525625908
+Clear,Clear,Clear,23.4,968746.9,1193592.6079415008
+Partially cloudy,Partially cloudy,"Rain, Partially cloudy",4.4,1747347.0,982298.3219200822
+Partially cloudy,Partially cloudy,Clear,12.0,236858.5,920757.9816370651
+Rain,"Rain, Partially cloudy","Rain, Partially cloudy",25.6,121356.3,1197144.6464258952
+"Snow, Rain, Overcast",Partially cloudy,"Rain, Partially cloudy",6.9,469706.8,974484.6899550958
+Partially cloudy,Clear,Clear,4.6,199528.2,982841.6539565313
+Rain,Clear,Clear,29.8,759990.4,687878.3200603902
+"Snow, Rain, Partially cloudy","Rain, Overcast","Rain, Overcast",3.3,893415.6,975083.9824814767
+Rain,"Rain, Partially cloudy",Partially cloudy,9.7,293107.7,942883.4143147971
+Clear,Clear,Clear,18.3,577043.9,1006598.7828306245
+Partially cloudy,Partially cloudy,Clear,9.7,1216259.0,942883.4143147971
+Partially cloudy,Clear,Partially cloudy,15.9,201214.8,942000.0765542504
+"Rain, Partially cloudy",Partially cloudy,"Rain, Overcast",15.7,660237.9,938416.7773276725
+"Rain, Overcast","Rain, Partially cloudy","Rain, Overcast",23.8,282764.8,1201460.0720295783
+Clear,Clear,Clear,6.7,489404.1,976118.5945368849
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",16.9,141971.9,964222.5457582062
+Rain,Clear,Partially cloudy,18.7,462247.3,1020779.9744894649
+Partially cloudy,Partially cloudy,Clear,0.3,825563.8,919606.9123126407
+Partially cloudy,Partially cloudy,Partially cloudy,2.6,445546.4,966668.1250735356
+"Rain, Partially cloudy","Rain, Partially cloudy",Clear,17.3,1045781.0,975062.2286951876
+"Rain, Partially cloudy",Clear,Clear,13.6,918154.7,917879.5260633741
+"Rain, Partially cloudy","Rain, Partially cloudy",Partially cloudy,20.3,561652.8,1083488.7354809889
+Partially cloudy,Partially cloudy,Clear,13.5,918154.7,917637.1901892922
+"Rain, Partially cloudy","Rain, Partially cloudy",Partially cloudy,8.7,206974.1,955139.4470377731
+"Rain, Overcast","Rain, Overcast","Rain, Overcast",9.8,247441.9,941682.0754326488
+Clear,Clear,Clear,16.0,1149443.0,943900.3211697377
+"Snow, Overcast","Snow, Rain, Overcast","Rain, Freezing Drizzle/Freezing Rain, Ice, Partially cloudy",-7.0,355610.1,858395.2742542886
+"Rain, Overcast","Rain, Overcast","Snow, Rain, Partially cloudy",3.7,4655198.0,978550.4287996815
+Rain,"Rain, Partially cloudy",Clear,28.1,267634.2,1011011.7734696487
+Clear,Partially cloudy,Clear,17.8,698002.9,990078.8781528138
+Partially cloudy,Clear,Clear,16.7,852013.4,959212.1126317016
+Partially cloudy,Clear,Partially cloudy,7.7,1793306.0,966726.3088399736
+Partially cloudy,Clear,Clear,4.3,476897.6,981940.1859020792
+Clear,Clear,Clear,19.1,1247569.0,1035700.1417927104
+Rain,Clear,Clear,11.8,4373708.0,922012.3704338435
+"Rain, Partially cloudy",Partially cloudy,Overcast,6.7,1480514.0,976118.5945368849
+Partially cloudy,"Snow, Rain",Clear,-11.6,753529.3,1668799.211761074
+Partially cloudy,Partially cloudy,Partially cloudy,4.0,663676.8,980513.7255598052
+"Rain, Partially cloudy",Clear,Partially cloudy,19.0,660237.9,1031907.6135595441
+Clear,Clear,Partially cloudy,9.8,3137241.0,941682.0754326488
+"Rain, Partially cloudy","Rain, Partially cloudy",Overcast,23.1,473223.2,1186199.7781739584
+Rain,"Rain, Partially cloudy",Clear,16.8,216271.2,961682.6527359129
+Partially cloudy,Partially cloudy,Partially cloudy,7.1,824215.7,972717.5508627505
+Rain,"Rain, Partially cloudy",Partially cloudy,25.9,1078645.0,1188040.11407453
+Rain,"Rain, Partially cloudy",Partially cloudy,13.4,206974.1,917456.0703456908
+"Rain, Partially cloudy",Partially cloudy,Partially cloudy,6.5,473223.2,977608.7975550683
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",10.4,350290.8,934756.8759939766
+"Rain, Partially cloudy","Rain, Overcast","Rain, Partially cloudy",4.6,178570.1,982841.6539565313
+Partially cloudy,Clear,Clear,4.1,3227914.0,981048.3488375238
+"Rain, Partially cloudy",Partially cloudy,"Rain, Partially cloudy",13.3,1814276.0,917335.2108848069
+Rain,Clear,Clear,15.4,498645.8,933584.9580070389
+"Rain, Partially cloudy",Partially cloudy,"Snow, Rain, Partially cloudy",5.9,554576.7,981118.1465709013
+Partially cloudy,Clear,Clear,8.0,968746.9,963413.3623678158
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",11.4,740396.2,925003.7545022703
+"Rain, Partially cloudy",Clear,Clear,9.5,811837.6,945312.1340123966
+"Rain, Overcast",Partially cloudy,"Rain, Partially cloudy",10.7,236203.7,931547.3120233738
+"Rain, Partially cloudy",Clear,Partially cloudy,30.7,852909.5,425865.00679132994
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",29.5,663676.8,759975.5001514895
+"Snow, Rain, Overcast","Rain, Overcast","Rain, Overcast",3.0,3206332.0,971842.8039315796
+Partially cloudy,Partially cloudy,Clear,-2.0,1554551.0,855337.5075901314
+"Snow, Rain, Freezing Drizzle/Freezing Rain, Ice, Partially cloudy","Snow, Rain, Overcast","Rain, Overcast",-1.7,584746.7,863723.3666630202
+Clear,Clear,Clear,20.0,291335.7,1071264.2311722368
+Partially cloudy,Partially cloudy,Clear,10.9,218827.9,929529.9618886355
+Clear,Clear,Partially cloudy,19.4,228338.1,1047297.5287639842
+Clear,Clear,Partially cloudy,13.7,985482.8,918184.0006471875
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",20.0,1814276.0,1071264.2311722368
+Partially cloudy,Partially cloudy,Clear,21.9,350990.7,1147229.6680688974
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Overcast",11.6,1319838.0,923431.3603906495
+Partially cloudy,Clear,Partially cloudy,23.3,2056764.0,1191259.879950436
+Partially cloudy,"Snow, Rain, Overcast",Clear,-1.6,913342.0,866557.9753590429
+"Rain, Overcast","Rain, Partially cloudy","Rain, Overcast",6.4,1002428.0,978296.8388838324
+Rain,Partially cloudy,Partially cloudy,3.0,206526.5,971842.8039315796
+"Rain, Overcast","Rain, Partially cloudy","Rain, Overcast",13.1,824215.7,917270.2905948448
+Partially cloudy,Clear,"Rain, Partially cloudy",28.8,1602049.0,901928.1053906289
+Clear,Partially cloudy,Clear,0.9,195293.2,934409.9470595227
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",24.1,480636.8,1205638.427998094
+Clear,Clear,Clear,12.0,2207165.0,920757.9816370651
+"Rain, Partially cloudy",Clear,Clear,10.3,215587.3,935869.4637402592
+"Rain, Partially cloudy",Clear,Partially cloudy,16.0,582767.5,943900.3211697377
+"Rain, Overcast","Rain, Partially cloudy","Rain, Overcast",14.3,514298.2,921363.0705348186
+Partially cloudy,Clear,Partially cloudy,14.5,2207165.0,922955.9836901112
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",25.1,607099.4,1206266.509860462
+"Rain, Partially cloudy","Rain, Partially cloudy",Clear,21.8,450563.6,1143490.7145909285
+Partially cloudy,Clear,Clear,25.7,386966.9,1194430.4541667253
+Clear,Clear,Clear,26.7,2157397.0,1148251.7061777855
+Partially cloudy,Clear,Clear,23.6,174591.6,1197831.9980869717
+"Rain, Overcast",Partially cloudy,"Rain, Overcast",6.4,317677.9,978296.8388838324
+Clear,Clear,Clear,18.1,1194642.0,999820.7383033584
+Clear,Clear,Partially cloudy,28.4,467181.0,967988.4853621249
+Partially cloudy,Partially cloudy,Overcast,9.7,870663.8,942883.4143147971
+"Rain, Overcast","Snow, Rain, Overcast","Rain, Overcast",12.4,761746.0,918786.2464183815
+Clear,Clear,Partially cloudy,8.9,825563.8,952691.3208850827
+Clear,Clear,Clear,21.8,136647.6,1143490.7145909285
+"Rain, Partially cloudy","Rain, Partially cloudy",Clear,24.3,1101180.0,1207500.0474318094
+"Rain, Partially cloudy","Rain, Partially cloudy",Partially cloudy,27.2,679883.7,1110183.0710304228
+"Rain, Partially cloudy",Clear,Clear,9.7,198728.5,942883.4143147971
+"Rain, Overcast","Rain, Overcast","Rain, Overcast",4.1,1484411.0,981048.3488375238
+"Rain, Partially cloudy","Rain, Partially cloudy",Partially cloudy,19.9,1001938.0,1067215.623109462
+"Rain, Overcast","Rain, Overcast","Rain, Overcast",5.2,1028090.0,983133.9745478895
+"Snow, Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",3.8,538214.0,979265.0932211801
+Overcast,Partially cloudy,Partially cloudy,3.9,1385913.0,979919.4238657469
+Partially cloudy,Clear,Partially cloudy,3.4,788039.9,976042.0874359744
+"Snow, Rain, Partially cloudy","Rain, Overcast","Rain, Overcast",4.2,593185.2,981523.6891212729
+Rain,"Rain, Partially cloudy",Partially cloudy,29.8,4655198.0,687878.3200603902
+Partially cloudy,Clear,Partially cloudy,27.2,137893.8,1110183.0710304228
+"Rain, Overcast","Rain, Partially cloudy","Rain, Overcast",16.6,340133.3,956811.4904781195
+Partially cloudy,Clear,Clear,3.6,215278.8,977775.1723021175
+"Rain, Overcast","Rain, Partially cloudy","Rain, Overcast",9.7,658085.1,942883.4143147971
+Partially cloudy,Clear,Partially cloudy,26.8,577043.9,1141513.2431912639
+"Rain, Partially cloudy","Rain, Overcast",Clear,6.4,2212229.0,978296.8388838324
+Partially cloudy,Clear,Partially cloudy,2.8,208123.8,969376.8127720032
+Clear,Clear,Clear,19.9,365960.0,1067215.623109462
+"Rain, Overcast","Rain, Partially cloudy","Rain, Overcast",16.1,396010.1,945872.8274280954
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",13.1,697955.7,917270.2905948448
+Partially cloudy,Partially cloudy,Partially cloudy,7.5,936816.1,968827.1008463758
+"Rain, Partially cloudy",Partially cloudy,"Rain, Partially cloudy",7.3,2408573.0,970827.9822555397
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",18.2,1255862.0,1003182.3764895798
+Partially cloudy,Clear,Clear,6.8,198728.5,975318.9589784852
+"Rain, Overcast","Rain, Partially cloudy","Rain, Partially cloudy",7.9,264005.1,964537.2677074312
+Clear,Clear,Clear,6.5,3903823.0,977608.7975550683
+Partially cloudy,Clear,Partially cloudy,2.0,823352.8,957112.8198942959
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",8.9,225748.1,952691.3208850827
+Clear,Clear,Rain,26.9,1567229.0,1134347.9847514771
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Overcast",16.8,174119.2,961682.6527359129
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",28.9,169951.3,883771.456167368
+"Rain, Partially cloudy","Rain, Partially cloudy",Partially cloudy,7.0,549921.1,973617.1070237134
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",11.7,1675467.0,922701.9832488012
+Partially cloudy,"Snow, Rain, Overcast",Clear,-4.7,498645.8,805778.0059099143
+Partially cloudy,Partially cloudy,Clear,21.4,952615.7,1128055.2681091838
+Clear,Clear,"Rain, Partially cloudy",15.5,1064879.0,935123.2184414323
+"Rain, Overcast","Rain, Partially cloudy","Rain, Partially cloudy",6.1,3921172.0,980118.0777541379
+Clear,Clear,Partially cloudy,1.6,355282.2,949594.7587761224
+"Rain, Overcast","Rain, Partially cloudy","Rain, Overcast",12.4,385916.8,918786.2464183815
+Clear,Partially cloudy,Partially cloudy,9.7,560397.8,942883.4143147971
+Clear,Clear,Partially cloudy,14.5,210376.6,922955.9836901112
+Rain,"Rain, Partially cloudy",Partially cloudy,23.2,1157334.0,1188793.5465076908
+Clear,Clear,Clear,16.5,295342.1,954481.2921137824
+Partially cloudy,Partially cloudy,Partially cloudy,14.8,845460.8,925862.7996051284
+Partially cloudy,Clear,Clear,13.2,133387.7,917273.6240099096
+Partially cloudy,Clear,Clear,0.6,600204.5,927192.9381355767
+Partially cloudy,Clear,Clear,13.8,242228.7,918551.5028319275
+Partially cloudy,Clear,Clear,25.4,133495.6,1201656.65402757
+"Rain, Partially cloudy","Rain, Partially cloudy",Clear,20.7,1149443.0,1099854.7417861328
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Partially cloudy",4.8,205594.3,983158.3809912989
+"Rain, Partially cloudy","Rain, Partially cloudy",Overcast,24.0,552992.6,1204423.3329749373
+Rain,"Rain, Partially cloudy",Clear,25.6,418457.5,1197144.6464258952
+Rain,Rain,Clear,30.7,294508.4,425865.00679132994
+Clear,Partially cloudy,Partially cloudy,3.5,1368202.0,976939.1127761886
+"Snow, Rain, Partially cloudy","Rain, Overcast","Rain, Partially cloudy",4.7,778942.6,983028.0243249193
+Clear,Partially cloudy,Partially cloudy,16.0,251223.2,943900.3211697377
+Overcast,Partially cloudy,Partially cloudy,19.2,684910.6,1039530.8047183937
+Clear,Partially cloudy,Clear,3.5,1180704.0,976939.1127761886
+Clear,Partially cloudy,Partially cloudy,14.9,448314.9,926971.7884709304
+Clear,Partially cloudy,Clear,3.3,273748.8,975083.9824814767
+"Snow, Rain, Partially cloudy","Rain, Partially cloudy",Partially cloudy,4.8,2772920.0,983158.3809912989
+Partially cloudy,Clear,Clear,15.7,359226.7,938416.7773276725
+Partially cloudy,Partially cloudy,Partially cloudy,3.2,1077278.0,974064.7339181651
+Clear,Clear,Clear,6.9,482607.3,974484.6899550958
+"Rain, Partially cloudy","Rain, Partially cloudy","Rain, Overcast",19.3,7220513.0,1043397.3707863976
+Clear,Partially cloudy,Partially cloudy,5.0,1349963.0,983253.8383200245
+Partially cloudy,Clear,"Rain, Partially cloudy",10.2,273667.3,937000.8058406435
+"Rain, Overcast",Partially cloudy,Partially cloudy,5.6,281328.3,982274.9873169592
+"Rain, Overcast","Rain, Partially cloudy","Rain, Overcast",16.0,331190.3,943900.3211697377
+"Snow, Rain, Partially cloudy","Rain, Overcast",Overcast,1.8,4687737.0,953464.8970372137
+"Rain, Partially cloudy",Clear,Partially cloudy,19.9,1168845.0,1067215.623109462
+Partially cloudy,Partially cloudy,"Rain, Partially cloudy",24.5,777610.5,1208554.8378036309
