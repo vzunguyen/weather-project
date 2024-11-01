@@ -9,4 +9,6 @@ This project aims to provide the users with weather forecast, giving the user an
 2. API / Backend: FastAPI
 3. Frontend: React.js
 
+## Deployment
+
 

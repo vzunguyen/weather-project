@@ -1,44 +1,23 @@
 import React from "react";
-import NavBar from "./components/NavBar.js"; // Import NavBar component
-import WeatherHomePage from "./pages/Home.js"; // Import WeatherHomePage component
-import TeamMember from "./pages/About Us.js";
-import Charts from "./pages/Our Models.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header.js"; // Import Header component
+import HomePage from "./pages/Home.js"; // Import WeatherHomePage component
+import AboutUs from "./pages/AboutUs.js";
+import ModelsPage from "./pages/Models.js";
 import Footer from "./components/Footer.js"; // Import Footer component
-import logo from "./logo.svg"; // Assuming you have a logo in your src folder
 import "./App.css"; // Optional: Import global CSS (if any)
 
 function App() {
   return (
     <div className="App">
-      {/* Render the NavBar at the top */}
-      <NavBar />
-
-      {/* Existing header content */}
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
-      {/* Render the main content (weather information) */}
-      <WeatherHomePage />
-
-      {/* Render the main content (weather information) */}
-      <TeamMember />
-
-      {/* Render the main content (weather information) */}
-      <Charts />
-
-      {/* Render the Footer at the bottom */}
+      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/models" element={<ModelsPage />} />
+        </Routes>
+      </BrowserRouter>
       <Footer />
     </div>
   );

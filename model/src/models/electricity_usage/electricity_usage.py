@@ -103,3 +103,9 @@ os.chdir('/Users/vzu/Projects/weather-project/model/data/predicted')
 prediction_df.to_csv('electricity_usage_predictions.csv', index=False)
 
 print("Predictions saved to 'electricity_usage_predictions.csv'")
+
+os.chdir('/Users/vzu/Projects/weather-project/model/data/predicted-json')
+# Convert to JSON
+# Save DataFrame to a JSON file
+prediction_df.to_json('electricity_usage_data.json', orient='records')
+
