@@ -1,0 +1,1444 @@
+{
+  "merged_predictions" : [
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 24.3,
+   "Actual Electricity Usage": 638801.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "1207500.0474318094"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Overcast",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 3.3,
+   "Actual Electricity Usage": 587241.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "975083.9824814767"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Overcast",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 5.2,
+   "Actual Electricity Usage": 740396.2,
+   "Predicted Electricity Usage (Polynomial Regression)": "983133.9745478895"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 16.4,
+   "Actual Electricity Usage": 711403.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "952221.965002919"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 15.6,
+   "Actual Electricity Usage": 254003.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "936733.7944800772"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 26.6,
+   "Actual Electricity Usage": 2408573,
+   "Predicted Electricity Usage (Polynomial Regression)": "1154573.9968356516"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 27,
+   "Actual Electricity Usage": 528523.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "1126745.1657658955"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 26.5,
+   "Actual Electricity Usage": 362205.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "1160490.5971411166"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 11.2,
+   "Actual Electricity Usage": 1649385,
+   "Predicted Electricity Usage (Polynomial Regression)": "926718.0774087836"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Snow, Rain, Ice, Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": -4.1,
+   "Actual Electricity Usage": 587241.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "810281.0456738"
+ },
+ {
+   "Actual Conditions": "Snow, Rain",
+   "Logistic Regression Prediction": "Snow, Rain, Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": -3.4,
+   "Actual Electricity Usage": 3903823,
+   "Predicted Electricity Usage (Polynomial Regression)": "821374.4927200037"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 17.8,
+   "Actual Electricity Usage": 293107.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "990078.8781528138"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 8.2,
+   "Actual Electricity Usage": 644861.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "961114.3154104688"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 20.1,
+   "Actual Electricity Usage": 151258,
+   "Predicted Electricity Usage (Polynomial Regression)": "1075327.9525625908"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 23.4,
+   "Actual Electricity Usage": 968746.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "1193592.6079415008"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 4.4,
+   "Actual Electricity Usage": 1747347,
+   "Predicted Electricity Usage (Polynomial Regression)": "982298.3219200822"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 12,
+   "Actual Electricity Usage": 236858.5,
+   "Predicted Electricity Usage (Polynomial Regression)": "920757.9816370651"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 25.6,
+   "Actual Electricity Usage": 121356.3,
+   "Predicted Electricity Usage (Polynomial Regression)": "1197144.6464258952"
+ },
+ {
+   "Actual Conditions": "Snow, Rain, Overcast",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 6.9,
+   "Actual Electricity Usage": 469706.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "974484.6899550958"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 4.6,
+   "Actual Electricity Usage": 199528.2,
+   "Predicted Electricity Usage (Polynomial Regression)": "982841.6539565313"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 29.8,
+   "Actual Electricity Usage": 759990.4,
+   "Predicted Electricity Usage (Polynomial Regression)": "687878.3200603902"
+ },
+ {
+   "Actual Conditions": "Snow, Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Overcast",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 3.3,
+   "Actual Electricity Usage": 893415.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "975083.9824814767"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 9.7,
+   "Actual Electricity Usage": 293107.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "942883.4143147971"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 18.3,
+   "Actual Electricity Usage": 577043.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "1006598.7828306245"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 9.7,
+   "Actual Electricity Usage": 1216259,
+   "Predicted Electricity Usage (Polynomial Regression)": "942883.4143147971"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 15.9,
+   "Actual Electricity Usage": 201214.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "942000.0765542504"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 15.7,
+   "Actual Electricity Usage": 660237.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "938416.7773276725"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 23.8,
+   "Actual Electricity Usage": 282764.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "1201460.0720295783"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 6.7,
+   "Actual Electricity Usage": 489404.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "976118.5945368849"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 16.9,
+   "Actual Electricity Usage": 141971.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "964222.5457582062"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 18.7,
+   "Actual Electricity Usage": 462247.3,
+   "Predicted Electricity Usage (Polynomial Regression)": "1020779.9744894649"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 0.3,
+   "Actual Electricity Usage": 825563.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "919606.9123126407"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 2.6,
+   "Actual Electricity Usage": 445546.4,
+   "Predicted Electricity Usage (Polynomial Regression)": "966668.1250735356"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 17.3,
+   "Actual Electricity Usage": 1045781,
+   "Predicted Electricity Usage (Polynomial Regression)": "975062.2286951876"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 13.6,
+   "Actual Electricity Usage": 918154.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "917879.5260633741"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 20.3,
+   "Actual Electricity Usage": 561652.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "1083488.7354809889"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 13.5,
+   "Actual Electricity Usage": 918154.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "917637.1901892922"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 8.7,
+   "Actual Electricity Usage": 206974.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "955139.4470377731"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Overcast",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 9.8,
+   "Actual Electricity Usage": 247441.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "941682.0754326488"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 16,
+   "Actual Electricity Usage": 1149443,
+   "Predicted Electricity Usage (Polynomial Regression)": "943900.3211697377"
+ },
+ {
+   "Actual Conditions": "Snow, Overcast",
+   "Logistic Regression Prediction": "Snow, Rain, Overcast",
+   "KNN Prediction": "Rain, Freezing Drizzle/Freezing Rain, Ice, Partially cloudy",
+   "Temperature": -7,
+   "Actual Electricity Usage": 355610.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "858395.2742542886"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Overcast",
+   "KNN Prediction": "Snow, Rain, Partially cloudy",
+   "Temperature": 3.7,
+   "Actual Electricity Usage": 4655198,
+   "Predicted Electricity Usage (Polynomial Regression)": "978550.4287996815"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 28.1,
+   "Actual Electricity Usage": 267634.2,
+   "Predicted Electricity Usage (Polynomial Regression)": "1011011.7734696487"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 17.8,
+   "Actual Electricity Usage": 698002.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "990078.8781528138"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 16.7,
+   "Actual Electricity Usage": 852013.4,
+   "Predicted Electricity Usage (Polynomial Regression)": "959212.1126317016"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 7.7,
+   "Actual Electricity Usage": 1793306,
+   "Predicted Electricity Usage (Polynomial Regression)": "966726.3088399736"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 4.3,
+   "Actual Electricity Usage": 476897.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "981940.1859020792"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 19.1,
+   "Actual Electricity Usage": 1247569,
+   "Predicted Electricity Usage (Polynomial Regression)": "1035700.1417927104"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 11.8,
+   "Actual Electricity Usage": 4373708,
+   "Predicted Electricity Usage (Polynomial Regression)": "922012.3704338435"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Overcast",
+   "Temperature": 6.7,
+   "Actual Electricity Usage": 1480514,
+   "Predicted Electricity Usage (Polynomial Regression)": "976118.5945368849"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Snow, Rain",
+   "KNN Prediction": "Clear",
+   "Temperature": -11.6,
+   "Actual Electricity Usage": 753529.3,
+   "Predicted Electricity Usage (Polynomial Regression)": "1668799.211761074"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 4,
+   "Actual Electricity Usage": 663676.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "980513.7255598052"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 19,
+   "Actual Electricity Usage": 660237.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "1031907.6135595441"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 9.8,
+   "Actual Electricity Usage": 3137241,
+   "Predicted Electricity Usage (Polynomial Regression)": "941682.0754326488"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Overcast",
+   "Temperature": 23.1,
+   "Actual Electricity Usage": 473223.2,
+   "Predicted Electricity Usage (Polynomial Regression)": "1186199.7781739584"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 16.8,
+   "Actual Electricity Usage": 216271.2,
+   "Predicted Electricity Usage (Polynomial Regression)": "961682.6527359129"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 7.1,
+   "Actual Electricity Usage": 824215.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "972717.5508627505"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 25.9,
+   "Actual Electricity Usage": 1078645,
+   "Predicted Electricity Usage (Polynomial Regression)": "1188040.11407453"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 13.4,
+   "Actual Electricity Usage": 206974.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "917456.0703456908"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 6.5,
+   "Actual Electricity Usage": 473223.2,
+   "Predicted Electricity Usage (Polynomial Regression)": "977608.7975550683"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 10.4,
+   "Actual Electricity Usage": 350290.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "934756.8759939766"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Overcast",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 4.6,
+   "Actual Electricity Usage": 178570.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "982841.6539565313"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 4.1,
+   "Actual Electricity Usage": 3227914,
+   "Predicted Electricity Usage (Polynomial Regression)": "981048.3488375238"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 13.3,
+   "Actual Electricity Usage": 1814276,
+   "Predicted Electricity Usage (Polynomial Regression)": "917335.2108848069"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 15.4,
+   "Actual Electricity Usage": 498645.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "933584.9580070389"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Snow, Rain, Partially cloudy",
+   "Temperature": 5.9,
+   "Actual Electricity Usage": 554576.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "981118.1465709013"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 8,
+   "Actual Electricity Usage": 968746.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "963413.3623678158"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 11.4,
+   "Actual Electricity Usage": 740396.2,
+   "Predicted Electricity Usage (Polynomial Regression)": "925003.7545022703"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 9.5,
+   "Actual Electricity Usage": 811837.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "945312.1340123966"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 10.7,
+   "Actual Electricity Usage": 236203.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "931547.3120233738"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 30.7,
+   "Actual Electricity Usage": 852909.5,
+   "Predicted Electricity Usage (Polynomial Regression)": "425865.00679132994"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 29.5,
+   "Actual Electricity Usage": 663676.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "759975.5001514895"
+ },
+ {
+   "Actual Conditions": "Snow, Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Overcast",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 3,
+   "Actual Electricity Usage": 3206332,
+   "Predicted Electricity Usage (Polynomial Regression)": "971842.8039315796"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": -2,
+   "Actual Electricity Usage": 1554551,
+   "Predicted Electricity Usage (Polynomial Regression)": "855337.5075901314"
+ },
+ {
+   "Actual Conditions": "Snow, Rain, Freezing Drizzle/Freezing Rain, Ice, Partially cloudy",
+   "Logistic Regression Prediction": "Snow, Rain, Overcast",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": -1.7,
+   "Actual Electricity Usage": 584746.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "863723.3666630202"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 20,
+   "Actual Electricity Usage": 291335.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "1071264.2311722368"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 10.9,
+   "Actual Electricity Usage": 218827.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "929529.9618886355"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 19.4,
+   "Actual Electricity Usage": 228338.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "1047297.5287639842"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 13.7,
+   "Actual Electricity Usage": 985482.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "918184.0006471875"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 20,
+   "Actual Electricity Usage": 1814276,
+   "Predicted Electricity Usage (Polynomial Regression)": "1071264.2311722368"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 21.9,
+   "Actual Electricity Usage": 350990.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "1147229.6680688974"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 11.6,
+   "Actual Electricity Usage": 1319838,
+   "Predicted Electricity Usage (Polynomial Regression)": "923431.3603906495"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 23.3,
+   "Actual Electricity Usage": 2056764,
+   "Predicted Electricity Usage (Polynomial Regression)": "1191259.879950436"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Snow, Rain, Overcast",
+   "KNN Prediction": "Clear",
+   "Temperature": -1.6,
+   "Actual Electricity Usage": 913342,
+   "Predicted Electricity Usage (Polynomial Regression)": "866557.9753590429"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 6.4,
+   "Actual Electricity Usage": 1002428,
+   "Predicted Electricity Usage (Polynomial Regression)": "978296.8388838324"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 3,
+   "Actual Electricity Usage": 206526.5,
+   "Predicted Electricity Usage (Polynomial Regression)": "971842.8039315796"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 13.1,
+   "Actual Electricity Usage": 824215.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "917270.2905948448"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 28.8,
+   "Actual Electricity Usage": 1602049,
+   "Predicted Electricity Usage (Polynomial Regression)": "901928.1053906289"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 0.9,
+   "Actual Electricity Usage": 195293.2,
+   "Predicted Electricity Usage (Polynomial Regression)": "934409.9470595227"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 24.1,
+   "Actual Electricity Usage": 480636.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "1205638.427998094"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 12,
+   "Actual Electricity Usage": 2207165,
+   "Predicted Electricity Usage (Polynomial Regression)": "920757.9816370651"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 10.3,
+   "Actual Electricity Usage": 215587.3,
+   "Predicted Electricity Usage (Polynomial Regression)": "935869.4637402592"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 16,
+   "Actual Electricity Usage": 582767.5,
+   "Predicted Electricity Usage (Polynomial Regression)": "943900.3211697377"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 14.3,
+   "Actual Electricity Usage": 514298.2,
+   "Predicted Electricity Usage (Polynomial Regression)": "921363.0705348186"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 14.5,
+   "Actual Electricity Usage": 2207165,
+   "Predicted Electricity Usage (Polynomial Regression)": "922955.9836901112"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 25.1,
+   "Actual Electricity Usage": 607099.4,
+   "Predicted Electricity Usage (Polynomial Regression)": "1206266.509860462"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 21.8,
+   "Actual Electricity Usage": 450563.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "1143490.7145909285"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 25.7,
+   "Actual Electricity Usage": 386966.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "1194430.4541667253"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 26.7,
+   "Actual Electricity Usage": 2157397,
+   "Predicted Electricity Usage (Polynomial Regression)": "1148251.7061777855"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 23.6,
+   "Actual Electricity Usage": 174591.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "1197831.9980869717"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 6.4,
+   "Actual Electricity Usage": 317677.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "978296.8388838324"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 18.1,
+   "Actual Electricity Usage": 1194642,
+   "Predicted Electricity Usage (Polynomial Regression)": "999820.7383033584"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 28.4,
+   "Actual Electricity Usage": 467181,
+   "Predicted Electricity Usage (Polynomial Regression)": "967988.4853621249"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Overcast",
+   "Temperature": 9.7,
+   "Actual Electricity Usage": 870663.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "942883.4143147971"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Snow, Rain, Overcast",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 12.4,
+   "Actual Electricity Usage": 761746,
+   "Predicted Electricity Usage (Polynomial Regression)": "918786.2464183815"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 8.9,
+   "Actual Electricity Usage": 825563.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "952691.3208850827"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 21.8,
+   "Actual Electricity Usage": 136647.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "1143490.7145909285"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 24.3,
+   "Actual Electricity Usage": 1101180,
+   "Predicted Electricity Usage (Polynomial Regression)": "1207500.0474318094"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 27.2,
+   "Actual Electricity Usage": 679883.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "1110183.0710304228"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 9.7,
+   "Actual Electricity Usage": 198728.5,
+   "Predicted Electricity Usage (Polynomial Regression)": "942883.4143147971"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Overcast",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 4.1,
+   "Actual Electricity Usage": 1484411,
+   "Predicted Electricity Usage (Polynomial Regression)": "981048.3488375238"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 19.9,
+   "Actual Electricity Usage": 1001938,
+   "Predicted Electricity Usage (Polynomial Regression)": "1067215.623109462"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Overcast",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 5.2,
+   "Actual Electricity Usage": 1028090,
+   "Predicted Electricity Usage (Polynomial Regression)": "983133.9745478895"
+ },
+ {
+   "Actual Conditions": "Snow, Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 3.8,
+   "Actual Electricity Usage": 538214,
+   "Predicted Electricity Usage (Polynomial Regression)": "979265.0932211801"
+ },
+ {
+   "Actual Conditions": "Overcast",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 3.9,
+   "Actual Electricity Usage": 1385913,
+   "Predicted Electricity Usage (Polynomial Regression)": "979919.4238657469"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 3.4,
+   "Actual Electricity Usage": 788039.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "976042.0874359744"
+ },
+ {
+   "Actual Conditions": "Snow, Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Overcast",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 4.2,
+   "Actual Electricity Usage": 593185.2,
+   "Predicted Electricity Usage (Polynomial Regression)": "981523.6891212729"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 29.8,
+   "Actual Electricity Usage": 4655198,
+   "Predicted Electricity Usage (Polynomial Regression)": "687878.3200603902"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 27.2,
+   "Actual Electricity Usage": 137893.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "1110183.0710304228"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 16.6,
+   "Actual Electricity Usage": 340133.3,
+   "Predicted Electricity Usage (Polynomial Regression)": "956811.4904781195"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 3.6,
+   "Actual Electricity Usage": 215278.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "977775.1723021175"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 9.7,
+   "Actual Electricity Usage": 658085.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "942883.4143147971"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 26.8,
+   "Actual Electricity Usage": 577043.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "1141513.2431912639"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Overcast",
+   "KNN Prediction": "Clear",
+   "Temperature": 6.4,
+   "Actual Electricity Usage": 2212229,
+   "Predicted Electricity Usage (Polynomial Regression)": "978296.8388838324"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 2.8,
+   "Actual Electricity Usage": 208123.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "969376.8127720032"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 19.9,
+   "Actual Electricity Usage": 365960,
+   "Predicted Electricity Usage (Polynomial Regression)": "1067215.623109462"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 16.1,
+   "Actual Electricity Usage": 396010.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "945872.8274280954"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 13.1,
+   "Actual Electricity Usage": 697955.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "917270.2905948448"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 7.5,
+   "Actual Electricity Usage": 936816.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "968827.1008463758"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 7.3,
+   "Actual Electricity Usage": 2408573,
+   "Predicted Electricity Usage (Polynomial Regression)": "970827.9822555397"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 18.2,
+   "Actual Electricity Usage": 1255862,
+   "Predicted Electricity Usage (Polynomial Regression)": "1003182.3764895798"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 6.8,
+   "Actual Electricity Usage": 198728.5,
+   "Predicted Electricity Usage (Polynomial Regression)": "975318.9589784852"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 7.9,
+   "Actual Electricity Usage": 264005.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "964537.2677074312"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 6.5,
+   "Actual Electricity Usage": 3903823,
+   "Predicted Electricity Usage (Polynomial Regression)": "977608.7975550683"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 2,
+   "Actual Electricity Usage": 823352.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "957112.8198942959"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 8.9,
+   "Actual Electricity Usage": 225748.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "952691.3208850827"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Rain",
+   "Temperature": 26.9,
+   "Actual Electricity Usage": 1567229,
+   "Predicted Electricity Usage (Polynomial Regression)": "1134347.9847514771"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 16.8,
+   "Actual Electricity Usage": 174119.2,
+   "Predicted Electricity Usage (Polynomial Regression)": "961682.6527359129"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 28.9,
+   "Actual Electricity Usage": 169951.3,
+   "Predicted Electricity Usage (Polynomial Regression)": "883771.456167368"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 7,
+   "Actual Electricity Usage": 549921.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "973617.1070237134"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 11.7,
+   "Actual Electricity Usage": 1675467,
+   "Predicted Electricity Usage (Polynomial Regression)": "922701.9832488012"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Snow, Rain, Overcast",
+   "KNN Prediction": "Clear",
+   "Temperature": -4.7,
+   "Actual Electricity Usage": 498645.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "805778.0059099143"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 21.4,
+   "Actual Electricity Usage": 952615.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "1128055.2681091838"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 15.5,
+   "Actual Electricity Usage": 1064879,
+   "Predicted Electricity Usage (Polynomial Regression)": "935123.2184414323"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 6.1,
+   "Actual Electricity Usage": 3921172,
+   "Predicted Electricity Usage (Polynomial Regression)": "980118.0777541379"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 1.6,
+   "Actual Electricity Usage": 355282.2,
+   "Predicted Electricity Usage (Polynomial Regression)": "949594.7587761224"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 12.4,
+   "Actual Electricity Usage": 385916.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "918786.2464183815"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 9.7,
+   "Actual Electricity Usage": 560397.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "942883.4143147971"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 14.5,
+   "Actual Electricity Usage": 210376.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "922955.9836901112"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 23.2,
+   "Actual Electricity Usage": 1157334,
+   "Predicted Electricity Usage (Polynomial Regression)": "1188793.5465076908"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 16.5,
+   "Actual Electricity Usage": 295342.1,
+   "Predicted Electricity Usage (Polynomial Regression)": "954481.2921137824"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 14.8,
+   "Actual Electricity Usage": 845460.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "925862.7996051284"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 13.2,
+   "Actual Electricity Usage": 133387.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "917273.6240099096"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 0.6,
+   "Actual Electricity Usage": 600204.5,
+   "Predicted Electricity Usage (Polynomial Regression)": "927192.9381355767"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 13.8,
+   "Actual Electricity Usage": 242228.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "918551.5028319275"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 25.4,
+   "Actual Electricity Usage": 133495.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "1201656.65402757"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 20.7,
+   "Actual Electricity Usage": 1149443,
+   "Predicted Electricity Usage (Polynomial Regression)": "1099854.7417861328"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 4.8,
+   "Actual Electricity Usage": 205594.3,
+   "Predicted Electricity Usage (Polynomial Regression)": "983158.3809912989"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Overcast",
+   "Temperature": 24,
+   "Actual Electricity Usage": 552992.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "1204423.3329749373"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 25.6,
+   "Actual Electricity Usage": 418457.5,
+   "Predicted Electricity Usage (Polynomial Regression)": "1197144.6464258952"
+ },
+ {
+   "Actual Conditions": "Rain",
+   "Logistic Regression Prediction": "Rain",
+   "KNN Prediction": "Clear",
+   "Temperature": 30.7,
+   "Actual Electricity Usage": 294508.4,
+   "Predicted Electricity Usage (Polynomial Regression)": "425865.00679132994"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 3.5,
+   "Actual Electricity Usage": 1368202,
+   "Predicted Electricity Usage (Polynomial Regression)": "976939.1127761886"
+ },
+ {
+   "Actual Conditions": "Snow, Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Overcast",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 4.7,
+   "Actual Electricity Usage": 778942.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "983028.0243249193"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 16,
+   "Actual Electricity Usage": 251223.2,
+   "Predicted Electricity Usage (Polynomial Regression)": "943900.3211697377"
+ },
+ {
+   "Actual Conditions": "Overcast",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 19.2,
+   "Actual Electricity Usage": 684910.6,
+   "Predicted Electricity Usage (Polynomial Regression)": "1039530.8047183937"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 3.5,
+   "Actual Electricity Usage": 1180704,
+   "Predicted Electricity Usage (Polynomial Regression)": "976939.1127761886"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 14.9,
+   "Actual Electricity Usage": 448314.9,
+   "Predicted Electricity Usage (Polynomial Regression)": "926971.7884709304"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Clear",
+   "Temperature": 3.3,
+   "Actual Electricity Usage": 273748.8,
+   "Predicted Electricity Usage (Polynomial Regression)": "975083.9824814767"
+ },
+ {
+   "Actual Conditions": "Snow, Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 4.8,
+   "Actual Electricity Usage": 2772920,
+   "Predicted Electricity Usage (Polynomial Regression)": "983158.3809912989"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 15.7,
+   "Actual Electricity Usage": 359226.7,
+   "Predicted Electricity Usage (Polynomial Regression)": "938416.7773276725"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 3.2,
+   "Actual Electricity Usage": 1077278,
+   "Predicted Electricity Usage (Polynomial Regression)": "974064.7339181651"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Clear",
+   "Temperature": 6.9,
+   "Actual Electricity Usage": 482607.3,
+   "Predicted Electricity Usage (Polynomial Regression)": "974484.6899550958"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 19.3,
+   "Actual Electricity Usage": 7220513,
+   "Predicted Electricity Usage (Polynomial Regression)": "1043397.3707863976"
+ },
+ {
+   "Actual Conditions": "Clear",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 5,
+   "Actual Electricity Usage": 1349963,
+   "Predicted Electricity Usage (Polynomial Regression)": "983253.8383200245"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 10.2,
+   "Actual Electricity Usage": 273667.3,
+   "Predicted Electricity Usage (Polynomial Regression)": "937000.8058406435"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 5.6,
+   "Actual Electricity Usage": 281328.3,
+   "Predicted Electricity Usage (Polynomial Regression)": "982274.9873169592"
+ },
+ {
+   "Actual Conditions": "Rain, Overcast",
+   "Logistic Regression Prediction": "Rain, Partially cloudy",
+   "KNN Prediction": "Rain, Overcast",
+   "Temperature": 16,
+   "Actual Electricity Usage": 331190.3,
+   "Predicted Electricity Usage (Polynomial Regression)": "943900.3211697377"
+ },
+ {
+   "Actual Conditions": "Snow, Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Rain, Overcast",
+   "KNN Prediction": "Overcast",
+   "Temperature": 1.8,
+   "Actual Electricity Usage": 4687737,
+   "Predicted Electricity Usage (Polynomial Regression)": "953464.8970372137"
+ },
+ {
+   "Actual Conditions": "Rain, Partially cloudy",
+   "Logistic Regression Prediction": "Clear",
+   "KNN Prediction": "Partially cloudy",
+   "Temperature": 19.9,
+   "Actual Electricity Usage": 1168845,
+   "Predicted Electricity Usage (Polynomial Regression)": "1067215.623109462"
+ },
+ {
+   "Actual Conditions": "Partially cloudy",
+   "Logistic Regression Prediction": "Partially cloudy",
+   "KNN Prediction": "Rain, Partially cloudy",
+   "Temperature": 24.5,
+   "Actual Electricity Usage": 777610.5,
+   "Predicted Electricity Usage (Polynomial Regression)": "1208554.8378036309"
+ }
+]
+}
