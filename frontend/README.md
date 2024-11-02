@@ -3,6 +3,8 @@
 ## Set Up
 - Install React
 ```npm install react```
+- Install React Rewired
+```npm install react-app-rewired --save-dev```
 - Install D3
 ```npm install d3```
 - Install Chart.js

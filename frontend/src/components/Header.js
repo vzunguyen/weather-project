@@ -8,13 +8,13 @@ export default function Header() {
       </span>
       {/* Navigation Links */}
       <div class="flex justify-center items-center md:justify-end md:space-x-6">
-        <a href="/" class="text-gray-500 hover:text-gray-900">
+        <a href="/" class="p-4 text-gray-500 hover:text-gray-900">
           Home
         </a>
-        <a href="/about" class="text-gray-500 hover:text-gray-900">
+        <a href="/about" class="p-4 text-gray-500 hover:text-gray-900">
           About Us
         </a>
-        <a href="/models" class="text-gray-500 hover:text-gray-900">
+        <a href="/models" class="p-4 text-gray-500 hover:text-gray-900">
           Our Models
         </a>
       </div>

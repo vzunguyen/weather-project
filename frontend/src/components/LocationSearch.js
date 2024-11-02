@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import {
-  getLocation,
-  getCurrentWeatherData,
-  predictWeather,
-  predictElectricityUsage,
-} from "../services/api";
+import lastLocation from "../../../backend/data/last_location.json";
+import { getLocation } from "../services/api";
 
 const LocationSearch = ({ setLocation }) => {
-  const [searchLocation, setSearchLocation] = useState("Melbourne");
+  const [searchLocation, setSearchLocation] = useState(lastLocation.location);
   const [message, setMessage] = useState("");
   const [error, setError] = useState(""); // New error state
 

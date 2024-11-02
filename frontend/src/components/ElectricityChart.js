@@ -1,8 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 
 const ElectricityChart = () => {
   const svgRef = useRef();
+  const containerRef = useRef();
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   const dataPoints = [
     { temperature: 24.3, actualUsage: 638801.1, predictedUsage: 1118953.77 },
@@ -667,19 +669,40 @@ const ElectricityChart = () => {
   ];
 
   useEffect(() => {
-    // Set up SVG and dimensions
-    const svg = d3.select(svgRef.current);
-    const width = 800;
-    const height = 400;
-    const margin = { top: 20, right: 30, bottom: 50, left: 50 };
+    const updateDimensions = () => {
+      const container = containerRef.current;
+      if (container) {
+        const width = container.clientWidth;
+        // Maintain aspect ratio for height
+        const height = Math.max(400, Math.min(width * 0.6, 600));
+        setDimensions({ width, height });
+      }
+    };
 
-    svg.attr("width", width).attr("height", height);
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  useEffect(() => {
+    if (dimensions.width === 0) return;
+
+    const margin = {
+      top: 20,
+      right: dimensions.width < 468 ? 20 : 30,
+      bottom: 50,
+      left: dimensions.width < 468 ? 40 : 50,
+    };
+
+    // Set up SVG
+    const svg = d3.select(svgRef.current);
+    svg.attr("width", dimensions.width).attr("height", dimensions.height);
 
     // Scale functions
     const xScale = d3
       .scaleLinear()
       .domain(d3.extent(dataPoints, (d) => d.temperature))
-      .range([margin.left, width - margin.right]);
+      .range([margin.left, dimensions.width - margin.right]);
 
     const yScale = d3
       .scaleLinear()
@@ -688,51 +711,55 @@ const ElectricityChart = () => {
         d3.max(dataPoints, (d) => Math.max(d.actualUsage, d.predictedUsage)),
       ])
       .nice()
-      .range([height - margin.bottom, margin.top]);
+      .range([dimensions.height - margin.bottom, margin.top]);
 
     // Clear previous content
     svg.selectAll("*").remove();
 
-    // Axes
+    // Axes with responsive font sizes
+    const fontSize = dimensions.width < 468 ? "10px" : "12px";
+
+    // X-axis
     svg
       .append("g")
-      .attr("transform", `translate(0,${height - margin.bottom})`)
+      .attr("transform", `translate(0,${dimensions.height - margin.bottom})`)
       .call(
         d3
           .axisBottom(xScale)
-          .ticks(6)
+          .ticks(dimensions.width < 468 ? 4 : 6)
           .tickFormat((d) => `${d}°C`)
       )
+      .style("font-size", fontSize)
       .append("text")
-      .attr("x", width / 2)
+      .attr("x", dimensions.width / 2)
       .attr("y", 40)
       .attr("fill", "black")
       .attr("text-anchor", "middle")
+      .style("font-size", dimensions.width < 468 ? "12px" : "14px")
       .text("Temperature (°C)");
 
+    // Y-axis
     svg
       .append("g")
       .attr("transform", `translate(${margin.left},0)`)
-      .call(d3.axisLeft(yScale).ticks(6).tickFormat(d3.format(".2s")))
+      .call(
+        d3
+          .axisLeft(yScale)
+          .ticks(dimensions.width < 468 ? 4 : 6)
+          .tickFormat(d3.format(".2s"))
+      )
+      .style("font-size", fontSize)
       .append("text")
-      .attr("x", -margin.left)
-      .attr("y", margin.top - 10)
+      .attr("transform", "rotate(-90)")
+      .attr("x", -(dimensions.height / 2))
+      .attr("y", -35)
       .attr("fill", "black")
-      .attr("text-anchor", "start")
+      .attr("text-anchor", "middle")
+      .style("font-size", dimensions.width < 468 ? "12px" : "14px")
       .text("Electricity Usage (kWh)");
 
-    // Tooltip
-    const tooltip = d3
-      .select("body")
-      .append("div")
-      .attr("class", "tooltip")
-      .style("position", "absolute")
-      .style("padding", "6px")
-      .style("background", "#fff")
-      .style("border", "1px solid #ddd")
-      .style("border-radius", "4px")
-      .style("visibility", "hidden")
-      .style("pointer-events", "none");
+    // Responsive point sizes
+    const pointSize = dimensions.width < 468 ? 3 : 5;
 
     // Scatter plot points for actual usage
     svg
@@ -743,21 +770,9 @@ const ElectricityChart = () => {
       .attr("class", "dot-actual")
       .attr("cx", (d) => xScale(d.temperature))
       .attr("cy", (d) => yScale(d.actualUsage))
-      .attr("r", 5)
+      .attr("r", pointSize)
       .attr("fill", "steelblue")
-      .attr("opacity", 0.7)
-      .on("mouseover", (event, d) => {
-        tooltip.style("visibility", "visible").html(
-          `<strong>Temp:</strong> ${d.temperature}°C<br>
-             <strong>Actual Usage:</strong> ${d.actualUsage.toFixed(2)} kWh`
-        );
-      })
-      .on("mousemove", (event) => {
-        tooltip
-          .style("top", `${event.pageY - 10}px`)
-          .style("left", `${event.pageX + 10}px`);
-      })
-      .on("mouseout", () => tooltip.style("visibility", "hidden"));
+      .attr("opacity", 0.7);
 
     // Scatter plot points for predicted usage
     svg
@@ -766,78 +781,68 @@ const ElectricityChart = () => {
       .enter()
       .append("rect")
       .attr("class", "dot-predicted")
-      .attr("x", (d) => xScale(d.temperature) - 4)
-      .attr("y", (d) => yScale(d.predictedUsage) - 4)
-      .attr("width", 8)
-      .attr("height", 8)
+      .attr("x", (d) => xScale(d.temperature) - pointSize)
+      .attr("y", (d) => yScale(d.predictedUsage) - pointSize)
+      .attr("width", pointSize * 2)
+      .attr("height", pointSize * 2)
       .attr("fill", "tomato")
-      .attr("opacity", 0.7)
-      .on("mouseover", (event, d) => {
-        tooltip.style("visibility", "visible").html(
-          `<strong>Temp:</strong> ${d.temperature}°C<br>
-             <strong>Predicted Usage:</strong> ${d.predictedUsage.toFixed(
-               2
-             )} kWh`
-        );
-      })
-      .on("mousemove", (event) => {
-        tooltip
-          .style("top", `${event.pageY - 10}px`)
-          .style("left", `${event.pageX + 10}px`);
-      })
-      .on("mouseout", () => tooltip.style("visibility", "hidden"));
+      .attr("opacity", 0.7);
 
-    // Legend
+    // Legend with responsive positioning and sizing
     const legendData = [
       { label: "Actual Usage", color: "steelblue", shape: "circle" },
       { label: "Predicted Usage", color: "tomato", shape: "square" },
     ];
 
-    svg
+    const legendX =
+      dimensions.width < 468
+        ? margin.left
+        : dimensions.width - margin.right - 120;
+
+    const legendY = dimensions.width < 468 ? margin.top : margin.top + 10;
+
+    const legend = svg
       .selectAll(".legend")
       .data(legendData)
       .enter()
       .append("g")
       .attr("class", "legend")
-      .attr(
-        "transform",
-        (d, i) =>
-          `translate(${width - margin.right - 100},${margin.top + i * 20})`
-      )
-      .each(function (d) {
+      .attr("transform", (d, i) => `translate(${legendX},${legendY + i * 20})`);
+
+    legend.each(function (d) {
+      if (d.shape === "circle") {
         d3.select(this)
-          .append(d.shape === "circle" ? "circle" : "rect")
-          .attr("r", 5)
-          .attr("width", 8)
-          .attr("height", 8)
+          .append("circle")
+          .attr("r", pointSize)
           .attr("fill", d.color)
           .attr("opacity", 0.7);
-
+      } else {
         d3.select(this)
-          .append("text")
-          .attr("x", 20)
-          .attr("y", 5)
-          .attr("dy", "0.35em")
-          .text(d.label)
-          .style("font-size", "12px");
-      });
-  }, [dataPoints]);
+          .append("rect")
+          .attr("width", pointSize * 2)
+          .attr("height", pointSize * 2)
+          .attr("x", -pointSize)
+          .attr("y", -pointSize)
+          .attr("fill", d.color)
+          .attr("opacity", 0.7);
+      }
+
+      d3.select(this)
+        .append("text")
+        .attr("x", 15)
+        .attr("y", 0)
+        .attr("dy", "0.35em")
+        .text(d.label)
+        .style("font-size", fontSize);
+    });
+  }, [dimensions, dataPoints]);
 
   return (
-    <div>
-      <h2 class="text-sm text-gray-500">
+    <div ref={containerRef} className="w-full">
+      <h2 className="text-xs sm:text-sm text-gray-500 mb-4">
         Electricity Usage vs. Temperature (Scatter Plot)
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <svg ref={svgRef}></svg>
-      </div>
-
-      <style>{`
-        .tooltip {
-          font-size: 12px;
-          color: #333;
-        }
-      `}</style>
+      <svg ref={svgRef} className="w-full"></svg>
     </div>
   );
 };

@@ -61,7 +61,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-32 bg-gradient-to-br from-gray-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 p-8">
+    <div className="min-h-screen pt-32 bg-gradient-to-br from-gray-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 p-8 pb-20">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center p-2 bg-purple-50 dark:bg-purple-900/30 rounded-lg mb-4">

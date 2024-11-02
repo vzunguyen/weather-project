@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import LocationSearch from "../components/LocationSearch";
+import lastLocation from "../../../backend/data/last_location.json";
 import {
   getCurrentWeatherData,
   predictElectricityUsage,
@@ -18,7 +19,7 @@ import {
 } from "lucide-react";
 
 export default function HomePage() {
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState(lastLocation.location);
   const [temperature, setTemperature] = useState(null);
   const [weatherType, setWeatherType] = useState("");
   const [humidity, setHumidity] = useState(null);
