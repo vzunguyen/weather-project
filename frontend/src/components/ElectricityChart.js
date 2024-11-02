@@ -825,8 +825,13 @@ const ElectricityChart = () => {
 
   return (
     <div>
-      <h2>Electricity Usage vs. Temperature (Scatter Plot)</h2>
-      <svg ref={svgRef}></svg>
+      <h2 class="text-sm text-gray-500">
+        Electricity Usage vs. Temperature (Scatter Plot)
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <svg ref={svgRef}></svg>
+      </div>
+
       <style>{`
         .tooltip {
           font-size: 12px;
