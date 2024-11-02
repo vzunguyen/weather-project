@@ -274,22 +274,17 @@ export default function HomePage() {
                   </div>
 
                   {predictedElectricityUsage ? (
-                    <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-sm text-green-600 dark:text-green-400 font-medium mb-2">
-                            Predicted Usage
-                          </p>
-                          <p className="text-3xl font-bold text-gray-900 dark:text-white">
-                            {predictedElectricityUsage}
-                            <span className="text-lg font-normal text-gray-500 dark:text-gray-400 ml-1">
-                              kWh
-                            </span>
-                          </p>
-                        </div>
-                        <div className="h-16 w-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                          <ZapOff className="w-8 h-8 text-green-600 dark:text-green-400" />
-                        </div>
+                    <div className="space-y-4">
+                      <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                        <p className="text-sm text-green-600 dark:text-green-400 font-medium mb-2">
+                          Predicted Usage
+                        </p>
+                        <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                          {predictedElectricityUsage}
+                          <span className="text-lg font-normal text-gray-500 dark:text-gray-400 ml-1">
+                            kWh
+                          </span>
+                        </p>
                       </div>
                     </div>
                   ) : (

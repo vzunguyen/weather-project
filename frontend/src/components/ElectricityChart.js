@@ -761,6 +761,19 @@ const ElectricityChart = () => {
     // Responsive point sizes
     const pointSize = dimensions.width < 468 ? 3 : 5;
 
+    // Tooltip
+    const tooltip = d3
+      .select("body")
+      .append("div")
+      .attr("class", "tooltip")
+      .style("position", "absolute")
+      .style("padding", "6px")
+      .style("background", "#fff")
+      .style("border", "1px solid #ddd")
+      .style("border-radius", "4px")
+      .style("visibility", "hidden")
+      .style("pointer-events", "none");
+
     // Scatter plot points for actual usage
     svg
       .selectAll(".dot-actual")
@@ -770,9 +783,21 @@ const ElectricityChart = () => {
       .attr("class", "dot-actual")
       .attr("cx", (d) => xScale(d.temperature))
       .attr("cy", (d) => yScale(d.actualUsage))
-      .attr("r", pointSize)
+      .attr("r", 5)
       .attr("fill", "steelblue")
-      .attr("opacity", 0.7);
+      .attr("opacity", 0.7)
+      .on("mouseover", (event, d) => {
+        tooltip.style("visibility", "visible").html(
+          `<strong>Temp:</strong> ${d.temperature}°C<br>
+             <strong>Actual Usage:</strong> ${d.actualUsage.toFixed(2)} kWh`
+        );
+      })
+      .on("mousemove", (event) => {
+        tooltip
+          .style("top", `${event.pageY - 10}px`)
+          .style("left", `${event.pageX + 10}px`);
+      })
+      .on("mouseout", () => tooltip.style("visibility", "hidden"));
 
     // Scatter plot points for predicted usage
     svg
@@ -781,12 +806,26 @@ const ElectricityChart = () => {
       .enter()
       .append("rect")
       .attr("class", "dot-predicted")
-      .attr("x", (d) => xScale(d.temperature) - pointSize)
-      .attr("y", (d) => yScale(d.predictedUsage) - pointSize)
-      .attr("width", pointSize * 2)
-      .attr("height", pointSize * 2)
+      .attr("x", (d) => xScale(d.temperature) - 4)
+      .attr("y", (d) => yScale(d.predictedUsage) - 4)
+      .attr("width", 8)
+      .attr("height", 8)
       .attr("fill", "tomato")
-      .attr("opacity", 0.7);
+      .attr("opacity", 0.7)
+      .on("mouseover", (event, d) => {
+        tooltip.style("visibility", "visible").html(
+          `<strong>Temp:</strong> ${d.temperature}°C<br>
+             <strong>Predicted Usage:</strong> ${d.predictedUsage.toFixed(
+               2
+             )} kWh`
+        );
+      })
+      .on("mousemove", (event) => {
+        tooltip
+          .style("top", `${event.pageY - 10}px`)
+          .style("left", `${event.pageX + 10}px`);
+      })
+      .on("mouseout", () => tooltip.style("visibility", "hidden"));
 
     // Legend with responsive positioning and sizing
     const legendData = [
