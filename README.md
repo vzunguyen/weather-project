@@ -9,6 +9,7 @@ This project aims to provide the users with weather forecast, giving the user an
 2. API / Backend: FastAPI
 3. Frontend: React.js
 
-## Deployment
+## External API that we used for this project
+In order to retrieve real-time weather data, we implement this [weather API](https://www.weatherapi.com/docs/).
 
 
