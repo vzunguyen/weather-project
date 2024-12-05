@@ -1,7 +1,6 @@
 fastapi
 uvicorn
 pandas
-sklearn
+scikit-learn
 joblib
 numpy
-datetime
